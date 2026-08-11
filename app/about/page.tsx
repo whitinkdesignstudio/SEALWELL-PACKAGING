@@ -94,7 +94,7 @@ export default function AboutPage() {
           <article className="founder-spotlight-row">
             <div className="founder-spotlight-content">
               <span className="founder-spotlight-role">Founder & Director</span>
-              <h3 className="founder-spotlight-name">[ Founder 1 Name ]</h3>
+              <h3 className="founder-spotlight-name">Snehal Bipinchandra Shah</h3>
               <p className="founder-spotlight-bio">
                 [ Awaiting founder 1 bio & leadership details ]
               </p>
@@ -116,7 +116,7 @@ export default function AboutPage() {
             </div>
             <div className="founder-spotlight-content">
               <span className="founder-spotlight-role">Co-Founder & Director</span>
-              <h3 className="founder-spotlight-name">[ Founder 2 Name ]</h3>
+              <h3 className="founder-spotlight-name">Shrinil Shripal Shah</h3>
               <p className="founder-spotlight-bio">
                 [ Awaiting founder 2 bio & leadership details ]
               </p>

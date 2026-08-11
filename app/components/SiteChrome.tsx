@@ -16,7 +16,13 @@ export function ArrowIcon() {
 }
 
 export function WhatsAppIcon() {
-  return <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.4-4.3a8.5 8.5 0 1 1 15.6-4.5Z" /><path d="M8.2 7.7c.3-.7.6-.7.9-.7h.5c.2 0 .4 0 .6.5l.8 1.9c.1.3.1.5-.1.7l-.6.8c-.2.2-.3.4-.1.7.7 1.3 1.7 2.3 3 3 .3.2.5.1.7-.1l.9-1.1c.2-.3.5-.3.8-.2l1.8.9c.3.2.5.3.5.5 0 .2-.2 1.2-.7 1.7-.5.6-1.4.9-2.2.9-.6 0-1.4-.2-2.4-.6-1-.5-4.4-1.7-6-5.8-.4-1-.4-1.8-.3-2.3.2-.4.6-.8.9-1.1" /></svg>;
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+      <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+    </svg>
+  );
 }
 
 export function PhoneIcon() {
@@ -26,8 +32,7 @@ export function PhoneIcon() {
 export function Brand() {
   return (
     <a className="brand" href="/" aria-label="Sealwell Packaging home">
-      <span className="brand-mark"><i /></span>
-      <span className="brand-copy"><strong>SEALWELL</strong><small>PACKAGING</small></span>
+      <img src="/assets/logo.png" alt="Sealwell Packaging Logo" className="brand-logo" />
     </a>
   );
 }
@@ -37,18 +42,28 @@ export function SiteHeader({ current }: { current: string }) {
     <>
       <div className="utility-bar">
         <span>Flip-off seal manufacturer · Ahmedabad, India</span>
-        <div><a href={`tel:+${contact.phoneRaw}`}><PhoneIcon /> {contact.phone}</a><a href={`mailto:${contact.email}`}>{contact.email}</a></div>
+        <div>
+          <a href={`tel:+${contact.phoneRaw}`}><PhoneIcon /> {contact.phone}</a>
+          <a href={`mailto:${contact.email}`}>{contact.email}</a>
+        </div>
       </div>
       <header className="site-header">
-        <span className="scroll-progress" aria-hidden="true" />
         <Brand />
         <nav className="desktop-nav" aria-label="Main navigation">
-          {nav.map(([label, href]) => <a className={current === label ? "active" : ""} href={href} key={label}>{label}</a>)}
+          {nav.map(([label, href]) => (
+            <a className={current === label ? "active" : ""} href={href} key={label}>{label}</a>
+          ))}
         </nav>
-        <a className="header-cta" href="/contact">Request a quote <ArrowIcon /></a>
+        <a className="header-cta" href="/contact">Request a Quote <ArrowIcon /></a>
         <details className="mobile-menu">
-          <summary aria-label="Open navigation"><span>Menu</span><i /></summary>
-          <div>{nav.map(([label, href]) => <a className={current === label ? "active" : ""} href={href} key={label}>{label}<ArrowIcon /></a>)}</div>
+          <summary aria-label="Open navigation">Menu</summary>
+          <div>
+            {nav.map(([label, href]) => (
+              <a className={current === label ? "active" : ""} href={href} key={label}>
+                {label} <ArrowIcon />
+              </a>
+            ))}
+          </div>
         </details>
       </header>
     </>
@@ -60,19 +75,45 @@ export function SiteFooter() {
     <>
       <footer className="site-footer">
         <div className="footer-top">
-          <div><Brand /><p>Focused manufacturing of 13 mm and 20 mm flip-off seals, supported by clear specifications and direct communication.</p></div>
-          <div><span>Navigate</span>{nav.slice(1).map(([label, href]) => <a href={href} key={label}>{label}</a>)}</div>
-          <div><span>Contact</span><a href={`tel:+${contact.phoneRaw}`}>{contact.phone}</a><a href={`mailto:${contact.email}`}>{contact.email}</a><a href={contact.map} target="_blank" rel="noreferrer">Road No. 13, Gopal Charan Industrial Hub</a></div>
+          <div>
+            <Brand />
+            <p>Specialised manufacturer of 13 mm and 20 mm flip-off seals and aluminium vial seals in Ahmedabad, Gujarat.</p>
+          </div>
+          <div>
+            <span>Navigation</span>
+            {nav.slice(1).map(([label, href]) => (
+              <a href={href} key={label}>{label}</a>
+            ))}
+          </div>
+          <div>
+            <span>Contact Information</span>
+            <a href={`tel:+${contact.phoneRaw}`}>{contact.phone}</a>
+            <a href={`mailto:${contact.email}`}>{contact.email}</a>
+            <a href={contact.map} target="_blank" rel="noreferrer">Road No. 13, Gopal Charan Industrial Hub, Ahmedabad</a>
+          </div>
         </div>
-        <div className="footer-bottom"><span>© 2026 Sealwell Packaging</span><span>13 mm · 20 mm · SW01–SW25</span><span>Ahmedabad, Gujarat, India</span></div>
+        <div className="footer-bottom">
+          <span>© 2026 Sealwell Packaging. All rights reserved.</span>
+          <span>13 mm · 20 mm · SW01–SW25</span>
+          <span>Ahmedabad, Gujarat, India</span>
+        </div>
       </footer>
-      <a className="floating-whatsapp" href={whatsappLink} target="_blank" rel="noreferrer" aria-label="Chat with Sealwell Packaging on WhatsApp"><WhatsAppIcon /><span>WhatsApp enquiry</span></a>
+      <a className="floating-whatsapp" href={whatsappLink} target="_blank" rel="noreferrer" aria-label="Chat with Sealwell Packaging on WhatsApp">
+        <WhatsAppIcon />
+      </a>
     </>
   );
 }
 
 export function SiteShell({ current, children }: { current: string; children: ReactNode }) {
-  return <><ScrollExperience /><SiteHeader current={current} /><main>{children}</main><SiteFooter /></>;
+  return (
+    <>
+      <ScrollExperience />
+      <SiteHeader current={current} />
+      <main>{children}</main>
+      <SiteFooter />
+    </>
+  );
 }
 
 export function PageHero({
@@ -81,33 +122,44 @@ export function PageHero({
   code,
   image,
   imageAlt,
-  imagePosition = "center",
 }: {
   title: ReactNode;
   intro: string;
   code: string;
   image: string;
   imageAlt: string;
-  imagePosition?: "left" | "center" | "right";
 }) {
   return (
-    <section className="page-hero page-hero-visual">
-      <img className={`page-hero-image position-${imagePosition}`} src={image} alt={imageAlt} />
-      <span className="page-hero-shade" aria-hidden="true" />
+    <section className="page-hero">
       <div className="page-hero-grid">
-        <div><p className="page-brand">Sealwell Packaging</p><h1>{title}</h1></div>
-        <div className="page-hero-side"><span className="page-code">{code}</span><p>{intro}</p></div>
+        <div>
+          <p className="section-label light">{code}</p>
+          <h1>{title}</h1>
+        </div>
+        <div>
+          <p>{intro}</p>
+        </div>
       </div>
-      <div className="page-hero-lines"><i /><i /><i /></div>
     </section>
   );
 }
 
-export function ContactBand({ title = "Let’s build the right seal for your requirement." }: { title?: string }) {
+export function ContactBand({ title = "Need packaging for your next production requirement?" }: { title?: string }) {
   return (
     <section className="contact-band">
-      <div><h2>{title}</h2></div>
-      <div><p>Share the size, colour code, quantity and delivery location. We will review the requirement and respond directly.</p><div className="contact-band-actions"><a className="button button-white" href="/contact">Request a quotation <ArrowIcon /></a><a className="contact-band-link" href={whatsappLink} target="_blank" rel="noreferrer"><WhatsAppIcon /> WhatsApp</a></div></div>
+      <div>
+        <h2>{title}</h2>
+      </div>
+      <div>
+        <p>Share your required seal size, SW colour code, quantity, and delivery location. Our manufacturing team will respond with complete details.</p>
+        <div className="contact-band-actions">
+          <a className="button button-white" href="/contact">Request Product Details <ArrowIcon /></a>
+          <a className="button button-secondary" style={{ color: '#ffffff', borderColor: '#ffffff' }} href={whatsappLink} target="_blank" rel="noreferrer">
+            <WhatsAppIcon /> WhatsApp Sealwell
+          </a>
+        </div>
+      </div>
     </section>
   );
 }
+

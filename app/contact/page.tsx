@@ -3,27 +3,78 @@ import InquiryForm from "../components/InquiryForm";
 import { ArrowIcon, PageHero, SiteShell, WhatsAppIcon } from "../components/SiteChrome";
 import { contact, whatsappLink } from "../data/site";
 
-export const metadata: Metadata = { title: "Contact | Sealwell Packaging", description: "Contact Sealwell Packaging for flip-off seal enquiries in Ahmedabad." };
+export const metadata: Metadata = {
+  title: "Contact Sealwell Packaging | Flip-Off Seal Manufacturer",
+  description: "Contact Sealwell Packaging for 13 mm and 20 mm pharmaceutical flip-off seal enquiries. Reach us on WhatsApp at 9898866610.",
+};
 
 export default function ContactPage() {
   return (
     <SiteShell current="Contact">
-      <PageHero code="05 / CONTACT" title={<>Start with the details.<br /><em>We’ll take it forward.</em></>} intro="Tell us the size, colour code and quantity you need. We will respond through your preferred channel." image="/assets/contact-banner.png" imageAlt="Prepared flip-off seal samples ready for a customer specification discussion" imagePosition="center" />
-      <section className="contact-intro">
-        <span>Before you enquire</span>
-        <p>For a faster response, share the nominal seal size, SW colour code, approximate quantity and delivery location.</p>
-        <a href="/products">Review product sizes <ArrowIcon /></a>
-      </section>
-      <section className="contact-page section">
-        <InquiryForm />
-        <div className="contact-side">
-          <div className="contact-primary"><p className="section-label">DIRECT SUPPORT</p><h2>Prefer a quick conversation?</h2><p>Connect with our team on WhatsApp or call using the number below.</p><a className="button button-primary" href={whatsappLink} target="_blank" rel="noreferrer"><WhatsAppIcon /> Start WhatsApp enquiry</a><a className="phone-link" href={`tel:+${contact.phoneRaw}`}>{contact.phone}</a></div>
-          <div className="contact-details"><article><span>01</span><div><h3>Manufacturing unit</h3><p>{contact.address}</p><a href={contact.map} target="_blank" rel="noreferrer">Open in Google Maps <ArrowIcon /></a></div></article><article><span>02</span><div><h3>Email</h3><a className="contact-value" href={`mailto:${contact.email}`}>{contact.email}</a><p>Send product specifications or a written requirement.</p></div></article><article><span>03</span><div><h3>Product range</h3><p>13 mm and 20 mm flip-off seals<br />Aluminium vial seals<br />SW01–SW25 colour range</p></div></article></div>
+      <PageHero
+        code="CONTACT SEALWELL PACKAGING"
+        title="Contact Sealwell Packaging"
+        intro="Submit your packaging requirements or message us directly on WhatsApp."
+        image="/assets/contact-banner.png"
+        imageAlt="Sealwell Packaging contact and enquiry"
+      />
+
+      <section className="section">
+        <div className="contact-page-layout">
+          {/* Form */}
+          <InquiryForm />
+
+          {/* Direct Info */}
+          <div className="contact-info-panel">
+            <div className="info-card-item" style={{ background: 'var(--navy)', color: '#ffffff' }}>
+              <p className="section-label light">Direct Messaging</p>
+              <h3 style={{ color: '#ffffff', fontSize: '24px', margin: '8px 0 12px' }}>WhatsApp Enquiry</h3>
+              <p style={{ color: '#A6B7C7', marginBottom: '20px' }}>Message Sealwell Packaging on WhatsApp for direct communication.</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <a className="button button-white" href={whatsappLink} target="_blank" rel="noreferrer">
+                  <WhatsAppIcon /> WhatsApp Sealwell Packaging (9898866610)
+                </a>
+              </div>
+            </div>
+
+            <div className="info-card-item">
+              <p className="section-label">Address & Location</p>
+              <h3>Factory Address</h3>
+              <p>{contact.address}</p>
+              <a className="text-link" href={contact.map} target="_blank" rel="noreferrer" style={{ marginTop: '12px' }}>
+                Open in Google Maps <ArrowIcon />
+              </a>
+            </div>
+
+            <div className="info-card-item">
+              <p className="section-label">Email Enquiries</p>
+              <h3>Written Requirements</h3>
+              <a href={`mailto:${contact.email}`} style={{ fontWeight: '700', color: 'var(--navy)', fontSize: '16px' }}>{contact.email}</a>
+            </div>
+          </div>
         </div>
       </section>
-      <section className="map-panel">
-        <div className="map-embed"><iframe title="Sealwell Packaging factory location" src="https://www.google.com/maps?q=22.9917082,72.7410283&z=16&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /><div className="map-card"><span>FACTORY LOCATION</span><strong>Sealwell Packaging<br />Ahmedabad</strong><p>{contact.address}</p><div className="map-coordinates">22.9917082, 72.7410283</div><a className="button button-white" href={contact.map} target="_blank" rel="noreferrer">Open directions <ArrowIcon /></a></div></div>
+
+      {/* Embedded Map Section */}
+      <section className="section" style={{ background: 'var(--paper-surface)', borderTop: '1px solid var(--border-subtle)' }}>
+        <div style={{ marginBottom: '32px' }}>
+          <p className="section-label">Location Map</p>
+          <h2>Visit our facility in Ahmedabad.</h2>
+        </div>
+        <div style={{ width: '100%', height: '400px', borderRadius: '6px', overflow: 'hidden', border: '1px solid var(--border-subtle)' }}>
+          <iframe
+            title="Sealwell Packaging factory location"
+            src="https://www.google.com/maps?q=22.9917082,72.7410283&z=16&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
       </section>
     </SiteShell>
   );
 }
+
+

@@ -1,22 +1,138 @@
 import type { Metadata } from "next";
-import { ContactBand, PageHero, SiteShell } from "../components/SiteChrome";
+import { ArrowIcon, ContactBand, PageHero, SiteShell } from "../components/SiteChrome";
 
-export const metadata: Metadata = { title: "About | Sealwell Packaging", description: "Learn about Sealwell Packaging and our focused approach to flip-off seal manufacturing in Ahmedabad." };
+export const metadata: Metadata = {
+  title: "About Sealwell Packaging | Flip-Off Seal Manufacturer",
+  description: "Learn about Sealwell Packaging, a B2B manufacturer specializing in 13 mm and 20 mm pharmaceutical flip-off seals and aluminium vial closures.",
+};
+
+const companyValues = [
+  { num: "01", title: "Multiple Sizes", copy: "13 mm and 20 mm Flip-Off Seals." },
+  { num: "02", title: "Wide Colour Selection", copy: "25 standard colour options for product identification and customer requirements." },
+  { num: "03", title: "Customized Solutions", copy: "Colour and product configurations developed according to customer requirements." },
+  { num: "04", title: "Consistent Manufacturing", copy: "Focus on dimensional consistency, finish, and reliable performance." },
+  { num: "05", title: "Bulk Manufacturing", copy: "Capability to cater to B2B and pharmaceutical packaging requirements." },
+] as const;
+
+const applications = [
+  "Pharmaceutical vials",
+  "Injectable product packaging",
+  "Pharmaceutical formulations",
+  "Biotech and healthcare packaging",
+  "Other suitable vial-closure applications",
+] as const;
 
 export default function AboutPage() {
   return (
     <SiteShell current="About">
-      <PageHero code="01 / COMPANY" title={<>Focused manufacturing.<br /><em>Dependable outcomes.</em></>} intro="We are an Ahmedabad-based manufacturer dedicated to flip-off seals and aluminium vial seals." image="/assets/about-manufacturing.png" imageAlt="Illustrative precision manufacturing line with aluminium flip-off seals" imagePosition="center" />
-      <section className="section story-grid">
-        <div className="story-marker"><span>SW</span><strong>Ahmedabad<br />Gujarat, India</strong><i /></div>
-        <div><p className="section-label">Company overview</p><h2>A specialised manufacturer with a practical purpose.</h2><p className="large-copy">Sealwell Packaging focuses on a defined product range: 13 mm and 20 mm flip-off seals for vial closure requirements.</p><p className="body-copy">That focus helps us keep conversations clear. Customers can review the nominal format, dimensional references and colour options in one place, then connect directly with our team for quotation and order coordination.</p><div className="company-facts"><div><span>Product focus</span><strong>Flip-off &amp; aluminium vial seals</strong></div><div><span>Standard range</span><strong>13 mm and 20 mm</strong></div><div><span>Colour references</span><strong>SW01 to SW25</strong></div></div></div>
+      <PageHero
+        code="ABOUT SEALWELL PACKAGING"
+        title="About Sealwell Packaging"
+        intro="Sealwell Packaging manufactures Flip-Off Seals and Aluminium Vial Seals for pharmaceutical and healthcare packaging requirements."
+        image="/assets/about-manufacturing.png"
+        imageAlt="Sealwell Packaging manufacturing"
+      />
+
+      {/* What We Manufacture & Our Approach */}
+      <section className="section editorial-intro">
+        <div>
+          <p className="section-label">Manufacturing Focus</p>
+          <h2>What We Manufacture</h2>
+        </div>
+        <div className="editorial-copy">
+          <p>
+            Sealwell Packaging specializes in the manufacturing of 13 mm Flip-Off Seals, 20 mm Flip-Off Seals, and Aluminium Vial Seals for pharmaceutical vial packaging.
+          </p>
+          <p>
+            At Sealwell Packaging, we manufacture Flip-Off Seals and Aluminium Vial Seals with a focus on consistent quality, dimensional accuracy, and dependable supply. Our products provide a clean and professional closure solution for pharmaceutical packaging applications.
+          </p>
+        </div>
       </section>
-      <section className="values-section section-dark">
-        <div className="section-head"><div><p className="section-label light">How we work</p><h2>Professional service,<br />kept straightforward.</h2></div></div>
-        <div className="value-grid"><article><span>01</span><h3>Product focus</h3><p>Attention stays on the defined 13 mm and 20 mm flip-off seal range.</p></article><article><span>02</span><h3>Clear information</h3><p>Sizes, colour references and requirement details are communicated directly.</p></article><article><span>03</span><h3>Responsive support</h3><p>Accessible communication from first enquiry through order coordination.</p></article></div>
+
+      {/* Customer-Focused B2B Manufacturing */}
+      <section className="section-dark process-timeline">
+        <p className="section-label light">Capabilities</p>
+        <h2>Customer-Focused Manufacturing</h2>
+        <div className="timeline-grid" style={{ gridTemplateColumns: 'repeat(5, 1fr)', marginTop: '40px' }}>
+          {companyValues.map((v) => (
+            <div className="timeline-step" key={v.num}>
+              <span className="step-num">{v.num}</span>
+              <h3 style={{ fontSize: '15px' }}>{v.title}</h3>
+              <p style={{ fontSize: '13px' }}>{v.copy}</p>
+            </div>
+          ))}
+        </div>
       </section>
-      <section className="section facility-grid"><div><p className="section-label">Manufacturing location</p><h2>Based in Ahmedabad.<br />Easy to reach.</h2></div><div><p>Our unit is located at Gopal Charan Industrial Hub on Kunjad–Bakrol Road, with direct contact available by WhatsApp, phone and email.</p><dl><div><dt>Address</dt><dd>Road No. 13, Shed No. 390</dd></div><div><dt>Core range</dt><dd>13 mm &amp; 20 mm flip-off seals</dd></div><div><dt>Enquiries</dt><dd>WhatsApp, phone or email</dd></div></dl><a className="location-link" href="/contact">View contact details and map →</a></div></section>
-      <ContactBand title="A focused manufacturing partner for every seal requirement." />
+
+      {/* Applications */}
+      <section className="section why-sealwell">
+        <div>
+          <p className="section-label">Target Applications</p>
+          <h2>Suitable Applications</h2>
+        </div>
+        <div className="why-list">
+          {applications.map((app) => (
+            <div className="why-item" key={app}>
+              <h3>{app}</h3>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Founders & Leadership Section */}
+      <section className="section">
+        <div>
+          <p className="section-label">Leadership & Direction</p>
+          <h2>Our Founders</h2>
+          <p style={{ color: 'var(--text-muted)', fontSize: '16px', marginTop: '8px' }}>
+            Guiding Sealwell Packaging with vision, manufacturing expertise, and commitment to pharmaceutical quality.
+          </p>
+        </div>
+
+        <div className="founders-spotlight">
+          {/* Founder 1: Content Left, Image Right */}
+          <article className="founder-spotlight-row">
+            <div className="founder-spotlight-content">
+              <span className="founder-spotlight-role">Founder & Director</span>
+              <h3 className="founder-spotlight-name">[ Founder 1 Name ]</h3>
+              <p className="founder-spotlight-bio">
+                [ Awaiting founder 1 bio & leadership details ]
+              </p>
+              <div className="founder-highlights">
+                <span className="founder-badge">Strategic Operations</span>
+                <span className="founder-badge">Quality Vision</span>
+                <span className="founder-badge">Client Partnerships</span>
+              </div>
+            </div>
+            <div className="founder-spotlight-media">
+              <img src="/assets/founder-1.jpg" alt="Sealwell Packaging Founder 1" />
+            </div>
+          </article>
+
+          {/* Founder 2: Image Left, Content Right */}
+          <article className="founder-spotlight-row reverse">
+            <div className="founder-spotlight-media">
+              <img src="/assets/founder-2.jpg" alt="Sealwell Packaging Founder 2" />
+            </div>
+            <div className="founder-spotlight-content">
+              <span className="founder-spotlight-role">Co-Founder & Director</span>
+              <h3 className="founder-spotlight-name">[ Founder 2 Name ]</h3>
+              <p className="founder-spotlight-bio">
+                [ Awaiting founder 2 bio & leadership details ]
+              </p>
+              <div className="founder-highlights">
+                <span className="founder-badge">Manufacturing Excellence</span>
+                <span className="founder-badge">Technical Innovation</span>
+                <span className="founder-badge">B2B Growth</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <ContactBand title="Discuss Your Requirement" />
     </SiteShell>
   );
 }
+
+

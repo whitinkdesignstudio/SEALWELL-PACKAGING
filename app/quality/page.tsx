@@ -1,24 +1,61 @@
 import type { Metadata } from "next";
 import { ContactBand, PageHero, SiteShell } from "../components/SiteChrome";
 
-export const metadata: Metadata = { title: "Quality Approach | Sealwell Packaging", description: "See the practical quality approach behind Sealwell Packaging flip-off seal manufacturing." };
+export const metadata: Metadata = {
+  title: "Consistent Manufacturing & Quality | Sealwell Packaging",
+  description: "Learn about Sealwell Packaging's focus on consistent quality, dimensional accuracy, fit, finish, and dependable supply.",
+};
 
-const steps = [
-  ["01", "Requirement review", "Nominal size, colour reference, quantity and delivery details are aligned at the enquiry stage."],
-  ["02", "Specification alignment", "The selected product format is matched with the relevant dimensional reference."],
-  ["03", "Process attention", "Manufacturing attention remains on repeatability and the agreed product requirement."],
-  ["04", "Visual review", "Finish and colour presentation are reviewed for an orderly, consistent appearance."],
-  ["05", "Order coordination", "Product and commercial details are reconfirmed before dispatch planning."],
+const qualityPoints = [
+  { symbol: "01", title: "Dimensional Accuracy", copy: "Manufactured with attention to controlled dimensions for reliable vial fitment." },
+  { symbol: "02", title: "Fit & Finish", copy: "Focus on clean and uniform cap finish for a professional overall presentation." },
+  { symbol: "03", title: "Consistent Quality", copy: "Attention to manufacturing repeatability and agreed product requirement details." },
+  { symbol: "04", title: "Dependable Supply", copy: "Structure for bulk B2B manufacturing and pharmaceutical packaging supply." },
 ] as const;
 
 export default function QualityPage() {
   return (
     <SiteShell current="Quality">
-      <PageHero code="03 / QUALITY" title={<>Consistency is not a claim.<br /><em>It is a process.</em></>} intro="Our quality approach stays practical: understand the requirement, control the essentials and review the result." image="/assets/quality-inspection.png" imageAlt="Precision dimensional inspection of an aluminium flip-off seal" imagePosition="center" />
-      <section className="section quality-intro"><div><p className="section-label">Our approach</p><h2>Quality begins with a clearly defined requirement.</h2></div><div><p className="large-copy">A reliable outcome starts before production—with the right nominal size, colour reference and commercial details understood by both sides.</p><p className="quality-note">Our website presents practical product references. Any application-specific or compliance requirement should be discussed and confirmed before ordering.</p></div></section>
-      <section className="process-section section-dark"><div className="process-heading"><p className="section-label light">Working sequence</p><h2>Five practical checkpoints.</h2></div><div className="process-rail">{steps.map(([no, title, copy]) => <article key={no}><span>{no}</span><div><h3>{title}</h3><p>{copy}</p></div></article>)}</div></section>
-      <section className="section quality-pillars"><div><p className="section-label">Product references</p><h2>Four details kept visible.</h2></div><div className="pillar-grid"><article><i>Ø</i><h3>Diameter</h3><p>Overall and inner diameter references for each nominal format.</p></article><article><i>↕</i><h3>Height</h3><p>Outer and inner height references for requirement discussion.</p></article><article><i>◉</i><h3>Finish</h3><p>Visual attention to a consistent overall product presentation.</p></article><article><i>●</i><h3>Colour</h3><p>SW01–SW25 codes for straightforward shade selection.</p></article></div></section>
-      <ContactBand title="Bring us your specification. We’ll help clarify the right format." />
+      <PageHero
+        code="QUALITY & CONSISTENCY"
+        title="Consistent Manufacturing & Quality"
+        intro="At Sealwell Packaging, we manufacture Flip-Off Seals and Aluminium Vial Seals with a focus on consistent quality, dimensional accuracy, and dependable supply."
+        image="/assets/quality-inspection.png"
+        imageAlt="Sealwell Packaging quality focus"
+      />
+
+      <section className="section editorial-intro">
+        <div>
+          <p className="section-label">Manufacturing Focus</p>
+          <h2>Precision-Engineered Closure Solutions</h2>
+        </div>
+        <div className="editorial-copy">
+          <p>
+            Our Flip-Off Seals are designed for secure and reliable closure of pharmaceutical vials.
+          </p>
+          <p>
+            Manufactured with attention to dimensional accuracy, fit, and finish, these seals provide a clean and professional closure solution for pharmaceutical packaging applications.
+          </p>
+        </div>
+      </section>
+
+      <section className="section-dark process-timeline">
+        <p className="section-label light">Pillars</p>
+        <h2>Key Manufacturing Priorities</h2>
+        <div className="timeline-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)', marginTop: '40px' }}>
+          {qualityPoints.map((p) => (
+            <div className="timeline-step" key={p.title}>
+              <span className="step-num">{p.symbol}</span>
+              <h3 style={{ fontSize: '16px', marginTop: '8px' }}>{p.title}</h3>
+              <p style={{ fontSize: '13px', marginTop: '6px' }}>{p.copy}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <ContactBand title="Discuss Your Packaging Requirement" />
     </SiteShell>
   );
 }
+
+

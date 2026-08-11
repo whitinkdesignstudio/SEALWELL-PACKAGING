@@ -13,7 +13,7 @@ export const products = [
   {
     slug: "13-mm",
     name: "13 mm Flip-Off Seal",
-    short: "A compact closure option for smaller vial formats.",
+    short: "Designed for pharmaceutical vials requiring a compact and reliable closure solution.",
     image: "/assets/13mm-flip-off-seal.png",
     imageAlt: "13 mm flip-off seal samples",
     specs: [
@@ -26,7 +26,7 @@ export const products = [
   {
     slug: "20-mm",
     name: "20 mm Flip-Off Seal",
-    short: "A dependable closure option for larger vial formats.",
+    short: "Designed for larger pharmaceutical vials, providing a secure, consistent, and visually clean closure solution.",
     image: "/assets/20mm-flip-off-seal.png",
     imageAlt: "20 mm red flip-off seal samples",
     specs: [
@@ -53,3 +53,4 @@ export const colours = [
   ["SW23", "Apple Green", "#64bf35"], ["SW24", "Reliance Green", "#089779"],
   ["SW25", "Rama Green", "#0082a0"],
 ] as const;
+

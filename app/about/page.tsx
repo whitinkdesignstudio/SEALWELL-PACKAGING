@@ -26,11 +26,9 @@ export default function AboutPage() {
   return (
     <SiteShell current="About">
       <PageHero
-        code="ABOUT SEALWELL PACKAGING"
         title="About Sealwell Packaging"
-        intro="Sealwell Packaging manufactures Flip-Off Seals and Aluminium Vial Seals for pharmaceutical and healthcare packaging requirements."
-        image="/assets/about-manufacturing.png"
-        imageAlt="Sealwell Packaging manufacturing"
+        image="/assets/banner-1920x800.png"
+        imageAlt="Sealwell Packaging 1920x800 banner placeholder"
       />
 
       {/* What We Manufacture & Our Approach */}
@@ -41,10 +39,7 @@ export default function AboutPage() {
         </div>
         <div className="editorial-copy">
           <p>
-            Sealwell Packaging specializes in the manufacturing of 13 mm Flip-Off Seals, 20 mm Flip-Off Seals, and Aluminium Vial Seals for pharmaceutical vial packaging.
-          </p>
-          <p>
-            At Sealwell Packaging, we manufacture Flip-Off Seals and Aluminium Vial Seals with a focus on consistent quality, dimensional accuracy, and dependable supply. Our products provide a clean and professional closure solution for pharmaceutical packaging applications.
+            Sealwell Packaging manufactures 13 mm and 20 mm Flip-Off Seals and Aluminium Vial Seals for pharmaceutical packaging applications.
           </p>
         </div>
       </section>
@@ -96,7 +91,7 @@ export default function AboutPage() {
               <span className="founder-spotlight-role">Founder & Director</span>
               <h3 className="founder-spotlight-name">Snehal Bipinchandra Shah</h3>
               <p className="founder-spotlight-bio">
-                [ Awaiting founder 1 bio & leadership details ]
+                Leads strategic operations, quality compliance, and B2B client partnerships.
               </p>
               <div className="founder-highlights">
                 <span className="founder-badge">Strategic Operations</span>
@@ -105,26 +100,45 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="founder-spotlight-media">
-              <img src="/assets/founder-1.jpg" alt="Sealwell Packaging Founder 1" />
+              <img src="/assets/founder-1.jpg" alt="Sealwell Packaging Founder Snehal Bipinchandra Shah" />
             </div>
           </article>
 
           {/* Founder 2: Image Left, Content Right */}
           <article className="founder-spotlight-row reverse">
             <div className="founder-spotlight-media">
-              <img src="/assets/founder-2.jpg" alt="Sealwell Packaging Founder 2" />
+              <img src="/assets/founder-2.jpg" alt="Sealwell Packaging Founder Shrinil Shripal Shah" />
             </div>
             <div className="founder-spotlight-content">
               <span className="founder-spotlight-role">Co-Founder & Director</span>
               <h3 className="founder-spotlight-name">Shrinil Shripal Shah</h3>
               <p className="founder-spotlight-bio">
-                [ Awaiting founder 2 bio & leadership details ]
+                Oversees manufacturing operations, technical design, and seal production.
               </p>
               <div className="founder-highlights">
                 <span className="founder-badge">Manufacturing Excellence</span>
                 <span className="founder-badge">Technical Innovation</span>
                 <span className="founder-badge">B2B Growth</span>
               </div>
+            </div>
+          </article>
+
+          {/* Founder 3: Content Left, Image Right */}
+          <article className="founder-spotlight-row">
+            <div className="founder-spotlight-content">
+              <span className="founder-spotlight-role">Co-Founder & Director</span>
+              <h3 className="founder-spotlight-name">Hardikkumar Dahyabhai Patel</h3>
+              <p className="founder-spotlight-bio">
+                Drives business expansion, supply chain management, and strategic client relations.
+              </p>
+              <div className="founder-highlights">
+                <span className="founder-badge">Business Expansion</span>
+                <span className="founder-badge">Supply Chain</span>
+                <span className="founder-badge">Client Relations</span>
+              </div>
+            </div>
+            <div className="founder-spotlight-media">
+              <img src="/assets/founder-3.jpg" alt="Sealwell Packaging Co-Founder Hardikkumar Dahyabhai Patel" />
             </div>
           </article>
         </div>

@@ -124,20 +124,24 @@ export function PageHero({
   imageAlt,
 }: {
   title: ReactNode;
-  intro: string;
-  code: string;
-  image: string;
-  imageAlt: string;
+  intro?: ReactNode;
+  code?: string;
+  image?: string;
+  imageAlt?: string;
 }) {
   return (
     <section className="page-hero">
+      {image ? (
+        <div className="page-hero-bg">
+          <img src={image} alt={imageAlt || "Sealwell Packaging banner"} />
+          <div className="page-hero-overlay" />
+        </div>
+      ) : null}
       <div className="page-hero-grid">
         <div>
-          <p className="section-label light">{code}</p>
+          {code ? <p className="section-label light">{code}</p> : null}
           <h1>{title}</h1>
-        </div>
-        <div>
-          <p>{intro}</p>
+          {intro ? <p style={{ marginTop: '16px' }}>{intro}</p> : null}
         </div>
       </div>
     </section>

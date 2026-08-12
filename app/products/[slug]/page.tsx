@@ -11,8 +11,10 @@ export function generateStaticParams() {
   ];
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const is13 = params.slug.includes("13");
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const slug = resolvedParams?.slug || "";
+  const is13 = slug.includes("13");
   if (is13) {
     return {
       title: "13 mm Flip-Off Seal | Sealwell Packaging",
@@ -33,8 +35,10 @@ const applications = [
   "Other suitable vial-closure applications",
 ] as const;
 
-export default function ProductDetailPage({ params }: { params: { slug: string } }) {
-  const is13 = params.slug.includes("13");
+export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const slug = resolvedParams?.slug || "";
+  const is13 = slug.includes("13");
   const product = products.find((p) => (is13 ? p.slug === "13-mm" : p.slug === "20-mm")) || products[0];
 
   return (

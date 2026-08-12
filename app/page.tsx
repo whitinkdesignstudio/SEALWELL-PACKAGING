@@ -1,4 +1,5 @@
 import { ArrowIcon, ContactBand, SiteShell, WhatsAppIcon } from "./components/SiteChrome";
+import { ClientLogosMarquee } from "./components/ClientLogosMarquee";
 import { colours, products, whatsappLink } from "./data/site";
 
 const whyPoints = [
@@ -60,6 +61,9 @@ export default function Home() {
           <span>Bulk Supply Capability</span>
         </div>
       </div>
+
+      {/* 2.5 Client Logos Moving Marquee Line */}
+      <ClientLogosMarquee />
 
       {/* 3. About Section */}
       <section className="section editorial-intro">

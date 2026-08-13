@@ -2,21 +2,25 @@ import type { Metadata } from "next";
 import { ArrowIcon, ContactBand, PageHero, SiteShell, WhatsAppIcon } from "../components/SiteChrome";
 import { products, whatsappLink } from "../data/site";
 import { ProductFeaturesSection } from "../components/ProductFeaturesSection";
+import { RubberStoppersSection } from "../components/RubberStoppersSection";
 
 export const metadata: Metadata = {
-  title: "Pharmaceutical Flip-Off Seals & Aluminium Vial Seals | Sealwell Packaging",
-  description: "Explore 13 mm and 20 mm pharmaceutical flip-off seals and aluminium vial seals from Sealwell Packaging. Available in 25 standard colours.",
+  title: "Pharmaceutical Rubber Stoppers & Flip-Off Seals | Sealwell Packaging",
+  description: "Explore high-quality pharmaceutical rubber stoppers, lyophilization closures, industrial bottle stoppers, and aluminium flip-off seals from Sealwell Packaging since 1995.",
 };
 
 export default function ProductsPage() {
   return (
     <SiteShell current="Products">
       <PageHero
-        title="Flip-Off & Aluminium Seals"
-        intro="High-precision 13 mm & 20 mm seals for pharmaceutical vials."
+        title="Pharmaceutical & Industrial Closures"
+        intro="High-precision rubber stoppers, lyophilization seals, and aluminium flip-off closures."
         image="/assets/products-banner.png"
         imageAlt="Sealwell Packaging product catalog"
       />
+
+      {/* Premium Human-Designed Rubber Stoppers Showcase Section */}
+      <RubberStoppersSection />
 
       <section className="section product-showcase">
         <div>
@@ -64,5 +68,6 @@ export default function ProductsPage() {
     </SiteShell>
   );
 }
+
 
 

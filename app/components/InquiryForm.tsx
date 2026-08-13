@@ -29,7 +29,7 @@ export default function InquiryForm() {
       } else {
         setResult(data.message || "Error submitting form. Please try again.");
       }
-    } catch (error) {
+    } catch {
       setResult("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
@@ -39,7 +39,6 @@ export default function InquiryForm() {
   return (
     <div className="contact-form-wrap">
       <div className="form-heading">
-        <span>QUOTATION ENQUIRY</span>
         <h2>Share your requirement.</h2>
         <p>Send your enquiry directly to our manufacturing team. We will get back to you shortly with complete details.</p>
       </div>

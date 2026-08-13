@@ -1,22 +1,9 @@
-import { ArrowIcon, ContactBand, SiteShell, WhatsAppIcon } from "./components/SiteChrome";
+import Link from "next/link";
+import { ArrowIcon, SiteShell, WhatsAppIcon } from "./components/SiteChrome";
 import { ClientLogosMarquee } from "./components/ClientLogosMarquee";
-import { colours, products, whatsappLink } from "./data/site";
-
-const whyPoints = [
-  { title: "Multiple Sizes", copy: "13 mm and 20 mm Flip-Off Seals." },
-  { title: "Wide Colour Selection", copy: "25 standard colour options for product identification and customer requirements." },
-  { title: "Customized Solutions", copy: "Colour and product configurations developed according to customer requirements." },
-  { title: "Consistent Manufacturing", copy: "Focus on dimensional consistency, finish, and reliable performance." },
-  { title: "Bulk Manufacturing", copy: "Capability to cater to B2B and pharmaceutical packaging requirements." },
-] as const;
-
-const applications = [
-  "Pharmaceutical vials",
-  "Injectable product packaging",
-  "Pharmaceutical formulations",
-  "Biotech and healthcare packaging",
-  "Other suitable vial-closure applications",
-] as const;
+import { products, whatsappLink } from "./data/site";
+import { WhyChooseSection } from "./components/WhyChooseSection";
+import { ColourSelectionSection } from "./components/ColourSelectionSection";
 
 export default function Home() {
   const prod20 = products.find((p) => p.slug === "20-mm") || products[1];
@@ -26,39 +13,74 @@ export default function Home() {
     <SiteShell current="Home">
       {/* 1. Hero */}
       <section className="home-hero">
+        <div className="home-hero-bg">
+          <img src="/assets/home-hero.png" alt="Sealwell Packaging flip-off seals" />
+          <div className="home-hero-overlay" />
+        </div>
         <div className="home-copy">
-          <p className="section-label">Sealwell Packaging</p>
-          <h1>Pharmaceutical Flip-Off Seals</h1>
+          <h2>Pharmaceutical Flip-Off Seals</h2>
           <p>
             Sealwell Packaging manufactures 13 mm and 20 mm Flip-Off Seals and Aluminium Vial Seals in 25 standard colours.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href="/products">View Products <ArrowIcon /></a>
-            <a className="button button-outline" href="/contact">Contact Us</a>
+            <Link className="button button-primary" href="/products">View Products <ArrowIcon /></Link>
+            <Link className="button button-outline" href="/contact">Contact Us</Link>
           </div>
-        </div>
-        <div className="hero-visual">
-          <img src="/assets/home-hero.png" alt="Sealwell Packaging flip-off seals" />
         </div>
       </section>
 
-      {/* 2. Micro Info Strip */}
+      {/* 2. Micro Info Strip - Redesigned Premium Banner */}
       <div className="info-strip">
         <div className="info-item">
-          <strong>13 mm Flip-Off Seals</strong>
-          <span>Compact Format</span>
+          <div className="info-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 8v4l3 3" />
+              <circle cx="12" cy="12" r="9" />
+            </svg>
+          </div>
+          <div className="info-text">
+            <strong>35+ Years Experience</strong>
+            <span>Pharma & Marketing</span>
+          </div>
         </div>
+
         <div className="info-item">
-          <strong>20 mm Flip-Off Seals</strong>
-          <span>Larger Format</span>
+          <div className="info-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v12M6 12h12" />
+            </svg>
+          </div>
+          <div className="info-text">
+            <strong>20 mm Flip-Off Seals</strong>
+            <span>Larger Format</span>
+          </div>
         </div>
+
         <div className="info-item">
-          <strong>25 Standard Colours</strong>
-          <span>SW01 to SW25</span>
+          <div className="info-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 2a10 10 0 0 1 10 10c0 2.5-2 4.5-4.5 4.5H16a2 2 0 0 0-2 2v.5c0 1.5-1 2.5-2 2.5a10 10 0 0 1-10-10A10 10 0 0 1 12 2z" />
+            </svg>
+          </div>
+          <div className="info-text">
+            <strong>25 Standard Colours</strong>
+            <span>SW01 to SW25</span>
+          </div>
         </div>
+
         <div className="info-item">
-          <strong>B2B Manufacturing</strong>
-          <span>Bulk Supply Capability</span>
+          <div className="info-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="M9 12l2 2 4-4" />
+            </svg>
+          </div>
+          <div className="info-text">
+            <strong>B2B Manufacturing</strong>
+            <span>Bulk Supply Capability</span>
+          </div>
         </div>
       </div>
 
@@ -67,22 +89,24 @@ export default function Home() {
 
       {/* 3. About Section */}
       <section className="section editorial-intro">
-        <div>
-          <p className="section-label">Overview</p>
+        <div className="editorial-intro-bg">
+          <img src="/assets/about-manufacturing-bg.png" alt="Sealwell Packaging cleanroom facility" />
+          <div className="editorial-intro-overlay" />
+        </div>
+        <div style={{ position: 'relative', zIndex: 2 }}>
           <h2>About Sealwell Packaging</h2>
         </div>
-        <div className="editorial-copy">
+        <div className="editorial-copy" style={{ position: 'relative', zIndex: 2 }}>
           <p>
-            Our Flip-Off Seals are designed for secure and reliable closure of pharmaceutical vials. Manufactured with attention to dimensional accuracy, fit, and finish, these seals provide a clean and professional closure solution for pharmaceutical packaging applications.
+            Sealwell Packaging brings an overall experience of 35+ years in pharmaceutical and marketing. Our Flip-Off Seals are designed for secure and reliable closure of pharmaceutical vials, manufactured with strict attention to dimensional accuracy, fit, and finish.
           </p>
-          <a className="text-link" href="/about">Learn more about Sealwell Packaging <ArrowIcon /></a>
+          <Link className="text-link" href="/about">Learn more about Sealwell Packaging <ArrowIcon /></Link>
         </div>
       </section>
 
       {/* 4. Product Overview */}
       <section className="section product-showcase">
         <div>
-          <p className="section-label">Main Products</p>
           <h2>Flip-Off Seal Range</h2>
         </div>
 
@@ -92,7 +116,6 @@ export default function Home() {
             <img src={prod20.image} alt={prod20.imageAlt} />
           </div>
           <div className="product-details-box">
-            <p className="section-label">20 mm Nominal Size</p>
             <h3>{prod20.name}</h3>
             <p>
               Our 20 mm Flip-Off Seal is designed for larger pharmaceutical vials and provides a secure, consistent, and visually clean closure solution. Manufactured with controlled dimensions and available in multiple colours, the 20 mm seal can be supplied according to customer-specific packaging requirements.
@@ -108,7 +131,7 @@ export default function Home() {
               </tbody>
             </table>
             <div>
-              <a className="button button-primary" href="/products/20-mm-flip-off-seal">Explore 20 mm Seal <ArrowIcon /></a>
+              <Link className="button button-primary" href="/products/20-mm-flip-off-seal">Explore 20 mm Seal <ArrowIcon /></Link>
             </div>
           </div>
         </article>
@@ -116,7 +139,6 @@ export default function Home() {
         {/* 13 mm Feature */}
         <article className="feature-product-13mm">
           <div className="product-details-box">
-            <p className="section-label">13 mm Nominal Size</p>
             <h3>{prod13.name}</h3>
             <p>
               Our 13 mm Flip-Off Seal is designed for pharmaceutical vials requiring a compact and reliable closure solution. The seal combines an aluminium outer component with a flip-off configuration to provide convenient access to the vial while maintaining a secure closure.
@@ -132,7 +154,7 @@ export default function Home() {
               </tbody>
             </table>
             <div>
-              <a className="button button-primary" href="/products/13-mm-flip-off-seal">Explore 13 mm Seal <ArrowIcon /></a>
+              <Link className="button button-primary" href="/products/13-mm-flip-off-seal">Explore 13 mm Seal <ArrowIcon /></Link>
             </div>
           </div>
           <div className="product-image-box">
@@ -141,75 +163,21 @@ export default function Home() {
         </article>
       </section>
 
-      {/* 5. Why Choose Sealwell Packaging */}
-      <section className="section why-sealwell">
-        <div>
-          <p className="section-label">Core Positioning</p>
-          <h2>Why Choose Sealwell Packaging</h2>
-          <p style={{ color: 'var(--text-muted)', fontSize: '15px', marginTop: '12px' }}>
-            Reliable • Consistent • Customizable • B2B Focused
-          </p>
-        </div>
-        <div className="why-list">
-          {whyPoints.map((item) => (
-            <div className="why-item" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.copy}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* 5. Why Choose Sealwell Packaging - Premium Redesign */}
+      <WhyChooseSection />
 
-      {/* 6. Applications */}
-      <section className="section-dark process-timeline">
-        <p className="section-label light">Target Packaging</p>
-        <h2>Suitable Applications</h2>
-        <div className="timeline-grid" style={{ gridTemplateColumns: 'repeat(5, 1fr)', marginTop: '40px' }}>
-          {applications.map((app, index) => (
-            <div className="timeline-step" key={app}>
-              <span className="step-num">0{index + 1}</span>
-              <h3 style={{ fontSize: '15px', marginTop: '8px' }}>{app}</h3>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 7. Colour Range Preview */}
-      <section className="section">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '20px' }}>
-          <div>
-            <p className="section-label">SW Code System</p>
-            <h2>Standard Colour Selection</h2>
-            <p style={{ color: 'var(--text-muted)', fontSize: '15px', marginTop: '8px' }}>
-              We offer 25 standard colour options to meet product identification, branding, and customer-specific packaging requirements.
-            </p>
-          </div>
-          <a className="text-link" href="/colours">View Colour Range <ArrowIcon /></a>
-        </div>
-        <div className="color-catalog-grid">
-          {colours.slice(0, 12).map(([code, name, hex]) => (
-            <div className="color-tile" key={code}>
-              <div className="color-swatch-box" style={{ backgroundColor: hex }} />
-              <span className="color-code">{code}</span>
-              <span className="color-name">{name}</span>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* 7. Colour Range Preview — Logo-Inspired Redesign */}
+      <ColourSelectionSection limit={12} showLink />
 
       {/* 8. Final CTA */}
       <section className="contact-band">
-        <div>
-          <h2>Discuss Your Packaging Requirement</h2>
-        </div>
-        <div>
-          <p>Contact Sealwell Packaging to discuss your required seal sizes, colour options, or custom configurations.</p>
-          <div className="contact-band-actions">
-            <a className="button button-white" href="/contact">Send Enquiry <ArrowIcon /></a>
-            <a className="button button-secondary" style={{ color: '#ffffff', borderColor: '#ffffff' }} href={whatsappLink} target="_blank" rel="noreferrer">
-              <WhatsAppIcon /> WhatsApp Sealwell Packaging
-            </a>
-          </div>
+        <h2>Discuss Your Packaging Requirement</h2>
+        <p>Contact Sealwell Packaging to discuss your required seal sizes, colour options, or custom configurations.</p>
+        <div className="contact-band-actions">
+          <Link className="button button-white" href="/contact">Send Enquiry <ArrowIcon /></Link>
+          <a className="button button-secondary" style={{ color: '#ffffff', borderColor: '#ffffff' }} href={whatsappLink} target="_blank" rel="noreferrer">
+            <WhatsAppIcon /> WhatsApp Sealwell Packaging
+          </a>
         </div>
       </section>
     </SiteShell>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ArrowIcon, ContactBand, PageHero, SiteShell, WhatsAppIcon } from "../../components/SiteChrome";
 import { products, whatsappLink } from "../../data/site";
 
@@ -44,12 +45,11 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   return (
     <SiteShell current="Products">
       <PageHero
-        code={is13 ? "NOMINAL SIZE: 13 MM" : "NOMINAL SIZE: 20 MM"}
         title={is13 ? "13 mm Flip-Off Seal" : "20 mm Flip-Off Seal"}
         intro={
           is13
-            ? "Our 13 mm Flip-Off Seal is designed for pharmaceutical vials requiring a compact and reliable closure solution."
-            : "Our 20 mm Flip-Off Seal is designed for larger pharmaceutical vials and provides a secure, consistent and visually clean closure solution."
+            ? "Compact and reliable 13 mm flip-off seals for pharmaceutical vials."
+            : "Secure and consistent 20 mm flip-off seals for larger vial closures."
         }
         image={product.image}
         imageAlt={product.imageAlt}
@@ -58,7 +58,6 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       {/* Product Description */}
       <section className="section editorial-intro">
         <div>
-          <p className="section-label">Product Overview</p>
           <h2>{is13 ? "13 mm Flip-Off Seal" : "20 mm Flip-Off Seal"}</h2>
         </div>
         <div className="editorial-copy">
@@ -73,7 +72,6 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       {/* Product Specifications & Features */}
       <section className="section product-showcase">
         <div>
-          <p className="section-label">Product Features</p>
           <h2>Key Characteristics</h2>
         </div>
         <div className="feature-product-20mm">
@@ -81,7 +79,6 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <img src={product.image} alt={product.imageAlt} />
           </div>
           <div className="product-details-box">
-            <p className="section-label">{product.name}</p>
             <h3>Dimensional Specifications</h3>
             <table className="specs-table">
               <tbody>
@@ -108,7 +105,6 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
       {/* Applications */}
       <section className="section-dark process-timeline">
-        <p className="section-label light">Suitable Applications</p>
         <h2>Applications</h2>
         <div className="timeline-grid" style={{ gridTemplateColumns: "repeat(5, 1fr)", marginTop: "40px" }}>
           {applications.map((app, idx) => (
@@ -124,13 +120,12 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       <section className="section">
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "20px" }}>
           <div>
-            <p className="section-label">Shade Options</p>
             <h2>Colour & Customization</h2>
             <p style={{ color: "var(--text-muted)", fontSize: "15px", marginTop: "8px" }}>
               Available in 25 standard colours. Custom colour requirements and packaging configurations can be developed according to customer requirements.
             </p>
           </div>
-          <a className="text-link" href="/colours">View Colour Range <ArrowIcon /></a>
+          <Link className="text-link" href="/colours">View Colour Range <ArrowIcon /></Link>
         </div>
       </section>
 

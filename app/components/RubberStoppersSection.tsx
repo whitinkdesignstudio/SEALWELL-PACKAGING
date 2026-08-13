@@ -248,6 +248,7 @@ function ContentBlock({
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded bg-[#071E33] text-white text-[11px] uppercase tracking-wider font-semibold hover:bg-[#112840] transition-colors"
+          style={{ color: '#ffffff' }}
         >
           Inquire Now
         </a>
@@ -888,6 +889,7 @@ export function RubberStoppersSection() {
                   target="_blank"
                   rel="noreferrer"
                   className="px-5 py-2 rounded bg-[#071E33] text-white text-[11px] uppercase tracking-wider font-semibold hover:bg-[#112840]"
+                  style={{ color: '#ffffff' }}
                 >
                   Request Quote
                 </a>

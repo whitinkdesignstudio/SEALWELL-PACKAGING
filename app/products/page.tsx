@@ -52,7 +52,7 @@ export default function ProductsPage() {
               </table>
 
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                <a className="button button-primary" href={`${whatsappLink}%20Product%3A%20${encodeURIComponent(product.name)}`} target="_blank" rel="noreferrer">
+                <a className="button button-primary" style={{ color: '#ffffff' }} href={`${whatsappLink}%20Product%3A%20${encodeURIComponent(product.name)}`} target="_blank" rel="noreferrer">
                   <WhatsAppIcon /> Request Product Information <ArrowIcon />
                 </a>
               </div>

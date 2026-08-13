@@ -408,12 +408,19 @@ main {
 }
 
 .button-primary {
-  background: var(--navy);
-  color: #ffffff;
+  background: var(--navy) !important;
+  color: #ffffff !important;
+}
+
+.button-primary,
+.button-primary *,
+.button-primary:visited {
+  color: #ffffff !important;
 }
 
 .button-primary:hover {
-  background: var(--navy-surface);
+  background: var(--navy-surface) !important;
+  color: #ffffff !important;
 }
 
 .button-secondary {

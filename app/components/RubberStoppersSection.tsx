@@ -709,10 +709,10 @@ export function RubberStoppersSection() {
           className="mb-10 sm:mb-14 md:mb-16 bg-[#071E33] text-white rounded-xl p-5 sm:p-6 md:p-10 relative overflow-hidden shadow-md border border-[#1F3852]"
         >
           <div className="max-w-2xl relative z-10 mb-5 sm:mb-6">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-white mb-3">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight mb-3" style={{ color: '#ffffff' }}>
               Customized To Your Requirement
             </h3>
-            <p className="text-xs sm:text-sm text-[#E2E8F0] leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm leading-relaxed font-normal" style={{ color: '#E2E8F0' }}>
               We offer customized rubber stopper manufacturing based on customer specifications. Customized sizes, dimensions, colours, materials and designs can be developed as per sample, drawing or specific application requirements.
             </p>
           </div>
@@ -753,7 +753,8 @@ export function RubberStoppersSection() {
               href={whatsappLink}
               target="_blank"
               rel="noreferrer"
-              className="w-full sm:w-auto px-5 sm:px-6 py-3 rounded-lg bg-[#071E33] text-white font-semibold text-xs uppercase tracking-wider hover:bg-[#112840] transition-colors inline-flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-5 sm:px-6 py-3 rounded-lg bg-[#071E33] font-semibold text-xs uppercase tracking-wider hover:bg-[#112840] transition-colors inline-flex items-center justify-center gap-2"
+              style={{ color: '#ffffff' }}
             >
               <span>Send Requirement</span>
               <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">

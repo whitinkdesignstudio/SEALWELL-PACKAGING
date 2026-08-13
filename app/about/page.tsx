@@ -240,10 +240,15 @@ export default function AboutPage() {
               <span className="founder-spotlight-role">Co-Founder & Director</span>
               <h3 className="founder-spotlight-name">Hardikkumar Dahyabhai Patel</h3>
               <p className="founder-spotlight-bio">
-                Drives business expansion, supply chain management, and strategic client relations.
+                Mechanical Engineering Professional | B.E., Government Engineering College, Patan (GTU, 2012)
+
+                Mechanical Engineering professional with a Bachelor's degree from Government Engineering College, Patan, under Gujarat Technological University (GTU), graduated in 2012. With over a decade of industry experience, brings strong technical knowledge, practical expertise, and a professional approach to mechanical engineering projects and operations.
+
+                Drives business expansion, supply chain management, and strategic client relations at Sealwell Packaging with a solid engineering foundation.
               </p>
               <div className="founder-highlights">
-                <span className="founder-badge">Business Expansion</span>
+                <span className="founder-badge">Mechanical Engineering</span>
+                <span className="founder-badge">GTU 2012</span>
                 <span className="founder-badge">Supply Chain</span>
                 <span className="founder-badge">Client Relations</span>
               </div>

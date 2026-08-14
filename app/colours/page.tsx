@@ -18,19 +18,23 @@ export default function ColoursPage() {
       />
 
       <section className="section editorial-intro">
-        <div>
+        <div className="editorial-intro-bg">
+          <img src="/assets/banner/colour.png" alt="Sealwell Packaging colour selection" />
+          <div className="editorial-intro-overlay" />
+        </div>
+        <div style={{ position: "relative", zIndex: 2 }}>
           <h2>Product Identification & Branding</h2>
         </div>
-        <div className="editorial-copy">
+        <div className="editorial-copy" style={{ position: "relative", zIndex: 2 }}>
           <p>
             Sealwell Packaging offers 25 standard colour options to support:
           </p>
-          <ul style={{ listStyle: 'disc', paddingLeft: '20px', color: 'var(--text-body)', lineHeight: '1.8' }}>
+          <ul style={{ listStyle: "disc", paddingLeft: "20px", color: "rgba(255,255,255,0.9)", lineHeight: "1.8" }}>
             <li>Product identification</li>
             <li>Branding</li>
             <li>Customer-specific packaging requirements</li>
           </ul>
-          <p style={{ marginTop: '16px' }}>
+          <p style={{ marginTop: "16px" }}>
             Custom colour requirements can also be accommodated according to customer preferences.
           </p>
         </div>

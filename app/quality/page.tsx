@@ -69,10 +69,14 @@ export default function QualityPage() {
       />
 
       <section className="section editorial-intro">
-        <div>
+        <div className="editorial-intro-bg">
+          <img src="/assets/banner/manufuture quilaty.png" alt="Sealwell Packaging manufacturing quality" />
+          <div className="editorial-intro-overlay" />
+        </div>
+        <div style={{ position: "relative", zIndex: 2 }}>
           <h2>Manufacturing Quality</h2>
         </div>
-        <div className="editorial-copy">
+        <div className="editorial-copy" style={{ position: "relative", zIndex: 2 }}>
           <p>
             Our Flip-Off Seals are manufactured with strict dimensional accuracy, clean finish, and reliable vial closure fit.
           </p>

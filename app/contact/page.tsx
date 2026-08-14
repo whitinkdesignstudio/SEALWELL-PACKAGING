@@ -14,7 +14,7 @@ export default function ContactPage() {
       <PageHero
         title="Contact Sealwell Packaging"
         intro="Submit your packaging requirements or message us directly on WhatsApp."
-        image="/assets/contact-banner.png"
+        image="/assets/banner/contact.png"
         imageAlt="Sealwell Packaging contact and enquiry"
       />
 

@@ -41,6 +41,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const slug = resolvedParams?.slug || "";
   const is13 = slug.includes("13");
   const product = products.find((p) => (is13 ? p.slug === "13-mm" : p.slug === "20-mm")) || products[0];
+  const bannerImage = is13 ? "/assets/banner/13mm.png" : "/assets/banner/20m.png";
 
   return (
     <SiteShell current="Products">
@@ -51,16 +52,20 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             ? "Compact and reliable 13 mm flip-off seals for pharmaceutical vials."
             : "Secure and consistent 20 mm flip-off seals for larger vial closures."
         }
-        image={product.image}
-        imageAlt={product.imageAlt}
+        image={bannerImage}
+        imageAlt={is13 ? "13 mm flip-off seal banner" : "20 mm flip-off seal banner"}
       />
 
       {/* Product Description */}
       <section className="section editorial-intro">
-        <div>
+        <div className="editorial-intro-bg">
+          <img src={is13 ? "/assets/banner/13mmm.png" : "/assets/banner/20 m.png"} alt={is13 ? "13 mm Flip-Off Seal background" : "20 mm Flip-Off Seal background"} />
+          <div className="editorial-intro-overlay" />
+        </div>
+        <div style={{ position: "relative", zIndex: 2 }}>
           <h2>{is13 ? "13 mm Flip-Off Seal" : "20 mm Flip-Off Seal"}</h2>
         </div>
-        <div className="editorial-copy">
+        <div className="editorial-copy" style={{ position: "relative", zIndex: 2 }}>
           <p>
             {is13
               ? "Our 13 mm Flip-Off Seal is designed for pharmaceutical vials requiring a compact and reliable closure solution. The seal combines an aluminium outer component with a flip-off configuration to provide convenient access to the vial while maintaining a secure closure."

@@ -15,7 +15,7 @@ export default function ProductsPage() {
       <PageHero
         title="Pharmaceutical & Industrial Closures"
         intro="High-precision rubber stoppers, lyophilization seals, and aluminium flip-off closures."
-        image="/assets/products-banner.png"
+        image="/assets/banner/product.png"
         imageAlt="Sealwell Packaging product catalog"
       />
 

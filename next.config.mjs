@@ -13,6 +13,26 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async rewrites() {
+    return [
+      {
+        source: "/20-mm-flip-off-seal",
+        destination: "/products/20-mm-flip-off-seal",
+      },
+      {
+        source: "/13-mm-flip-off-seal",
+        destination: "/products/13-mm-flip-off-seal",
+      },
+      {
+        source: "/20-mm",
+        destination: "/products/20-mm",
+      },
+      {
+        source: "/13-mm",
+        destination: "/products/13-mm",
+      },
+    ];
+  },
 };
 
 export default nextConfig;

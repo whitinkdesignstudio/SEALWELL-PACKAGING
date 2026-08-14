@@ -166,10 +166,14 @@ export default function AboutPage() {
 
       {/* What We Manufacture & Our Approach */}
       <section className="section editorial-intro">
-        <div>
+        <div className="editorial-intro-bg">
+          <img src="/assets/banner/about.png" alt="Sealwell Packaging manufacturing capabilities" />
+          <div className="editorial-intro-overlay" />
+        </div>
+        <div style={{ position: "relative", zIndex: 2 }}>
           <h2>What We Manufacture</h2>
         </div>
-        <div className="editorial-copy">
+        <div className="editorial-copy" style={{ position: "relative", zIndex: 2 }}>
           <p>
             With an overall experience of 35+ years in pharmaceutical and marketing, Sealwell Packaging manufactures 13 mm and 20 mm Flip-Off Seals and Aluminium Vial Seals for pharmaceutical packaging applications.
           </p>
@@ -220,7 +224,7 @@ export default function AboutPage() {
               <span className="founder-spotlight-role">Founder & Partner</span>
               <h3 className="founder-spotlight-name">Shrinil Shripal Shah</h3>
               <p className="founder-spotlight-bio">
-                 Entrepreneur | Food Brand Professional | Biomedical Sciences Student 
+                Entrepreneur | Food Brand Professional | Biomedical Sciences Student
 
                 Biomedical Sciences student. Founder of UNFOLD, a ready-to-eat dehydrated food brand focused on convenience, quality, and innovation.
 

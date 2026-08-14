@@ -19,8 +19,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [{ url: "/assets/home-hero.png", width: 1672, height: 941, alt: "Sealwell Packaging flip-off seal range" }],
   },
-  other: { "codex-preview": "development" },
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  icons: {
+    icon: "/assets/ChatGPT Image Aug 14, 2026, 10_14_11 AM.png",
+    shortcut: "/assets/ChatGPT Image Aug 14, 2026, 10_14_11 AM.png",
+    apple: "/assets/ChatGPT Image Aug 14, 2026, 10_14_11 AM.png",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

@@ -23,8 +23,8 @@ export default function Home() {
             Sealwell Packaging manufactures 13 mm and 20 mm Flip-Off Seals and Aluminium Vial Seals in 25 standard colours.
           </p>
           <div className="hero-actions">
-            <Link className="button button-primary" href="/products">View Products <ArrowIcon /></Link>
-            <Link className="button button-outline" href="/contact">Contact Us</Link>
+            <Link className="hero-btn-primary" href="/products">View Products <ArrowIcon /></Link>
+            <Link className="hero-btn-secondary" href="/contact">Contact Us</Link>
           </div>
         </div>
       </section>

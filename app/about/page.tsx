@@ -191,7 +191,7 @@ export default function AboutPage() {
           {/* Founder 1: Content Left, Image Right */}
           <article className="founder-spotlight-row">
             <div className="founder-spotlight-content">
-              <span className="founder-spotlight-role">Founder & Director</span>
+              <span className="founder-spotlight-role">Founder & Partner</span>
               <h3 className="founder-spotlight-name">Snehal Bipinchandra Shah</h3>
               <p className="founder-spotlight-bio">
                 Chemical Industry Professional | Marketing & Business Development
@@ -217,7 +217,7 @@ export default function AboutPage() {
               <img src="/assets/founder-2.jpg" alt="Sealwell Packaging Founder Shrinil Shripal Shah" />
             </div>
             <div className="founder-spotlight-content">
-              <span className="founder-spotlight-role">Co-Founder & Director</span>
+              <span className="founder-spotlight-role">Founder & Partner</span>
               <h3 className="founder-spotlight-name">Shrinil Shripal Shah</h3>
               <p className="founder-spotlight-bio">
                 Biomedical Sciences Student | Entrepreneur | Food Brand Professional
@@ -237,7 +237,7 @@ export default function AboutPage() {
           {/* Founder 3: Content Left, Image Right */}
           <article className="founder-spotlight-row">
             <div className="founder-spotlight-content">
-              <span className="founder-spotlight-role">Co-Founder & Director</span>
+              <span className="founder-spotlight-role">Partner</span>
               <h3 className="founder-spotlight-name">Hardikkumar Dahyabhai Patel</h3>
               <p className="founder-spotlight-bio">
                 Mechanical Engineering Professional | B.E., Government Engineering College, Patan (GTU, 2012)
@@ -254,7 +254,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="founder-spotlight-media">
-              <img src="/assets/founder-3.jpg" alt="Sealwell Packaging Co-Founder Hardikkumar Dahyabhai Patel" />
+              <img src="/assets/founder-3.jpg" alt="Sealwell Packaging Partner Hardikkumar Dahyabhai Patel" />
             </div>
           </article>
         </div>

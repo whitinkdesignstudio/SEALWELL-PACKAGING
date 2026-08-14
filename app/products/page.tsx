@@ -19,9 +19,7 @@ export default function ProductsPage() {
         imageAlt="Sealwell Packaging product catalog"
       />
 
-      {/* Premium Human-Designed Rubber Stoppers Showcase Section */}
-      <RubberStoppersSection />
-
+      {/* Flip-Off Seal Formats Section (First) */}
       <section className="section product-showcase">
         <div>
           <h2>Flip-Off Seal Formats</h2>
@@ -60,6 +58,9 @@ export default function ProductsPage() {
           </article>
         ))}
       </section>
+
+      {/* Premium Human-Designed Rubber Stoppers Showcase Section */}
+      <RubberStoppersSection />
 
       {/* Redesigned Product Engineering Features Section */}
       <ProductFeaturesSection />

@@ -220,9 +220,9 @@ export default function AboutPage() {
               <span className="founder-spotlight-role">Founder & Partner</span>
               <h3 className="founder-spotlight-name">Shrinil Shripal Shah</h3>
               <p className="founder-spotlight-bio">
-                Biomedical Sciences Student | Entrepreneur | Food Brand Professional
+                 Entrepreneur | Food Brand Professional | Biomedical Sciences Student 
 
-                Biomedical Sciences student and entrepreneur currently pursuing a B.Sc. from the Institute of Advanced Research. Founder of UNFOLD, a ready-to-eat dehydrated food brand focused on convenience, quality, and innovation.
+                Biomedical Sciences student. Founder of UNFOLD, a ready-to-eat dehydrated food brand focused on convenience, quality, and innovation.
 
                 Brings practical experience in business planning, product development, marketing, vendor coordination, administration, and brand development, with a strong interest in building modern consumer-focused businesses.
               </p>

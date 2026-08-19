@@ -2,36 +2,73 @@
 
 import { FormEvent, useState } from "react";
 import { ArrowIcon } from "./SiteChrome";
+import { contact } from "../data/site";
 
 export default function InquiryForm() {
-  const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setLoading(true);
-    setResult("Sending enquiry...");
 
     const formElement = event.currentTarget;
     const formData = new FormData(formElement);
-    formData.append("access_key", "678151bf-5772-43a8-9d9b-137e0a5921a7");
 
+    const name = (formData.get("name") as string) || "";
+    const company = (formData.get("company") as string) || "";
+    const phone = (formData.get("phone") as string) || "";
+    const email = (formData.get("email") as string) || "";
+    const product = (formData.get("product") as string) || "";
+    const colour = (formData.get("colour") as string) || "";
+    const quantity = (formData.get("quantity") as string) || "";
+    const delivery = (formData.get("delivery") as string) || "";
+    const message = (formData.get("message") as string) || "";
+
+    // Construct email draft content
+    const subject = `Enquiry: ${product || "Flip-Off Seals"} - ${name}${company ? ` (${company})` : ""}`;
+    const body = `Dear Sealwell Packaging Team,
+
+I would like to submit the following enquiry regarding your flip-off seals and packaging solutions:
+
+--- CONTACT INFORMATION ---
+• Name: ${name}
+• Company: ${company ? company : "N/A"}
+• Phone / WhatsApp: ${phone}
+• Email: ${email}
+
+--- PRODUCT REQUIREMENTS ---
+• Product: ${product}
+• Colour Reference: ${colour ? colour : "N/A"}
+• Required Quantity: ${quantity ? quantity : "N/A"}
+• Delivery Location: ${delivery ? delivery : "N/A"}
+
+--- REQUIREMENT DETAILS ---
+${message}
+
+Thank you,
+${name}`;
+
+    const mailtoUrl = `mailto:${contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open email client with pre-filled draft
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
-      });
+      window.location.href = mailtoUrl;
+    } catch (e) {
+      console.error("Error opening mailto link:", e);
+    }
 
-      const data = (await response.json()) as { success?: boolean; message?: string };
-      if (data.success) {
-        setResult("Success! Your enquiry has been sent successfully.");
-        formElement.reset();
-      } else {
-        setResult(data.message || "Error submitting form. Please try again.");
-      }
+    // Also send via Web3Forms in background for backup record
+    formData.append("access_key", "678151bf-5772-43a8-9d9b-137e0a5921a7");
+    try {
+      await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
     } catch {
-      setResult("Something went wrong. Please try again.");
+      // ignore
     } finally {
+      // Auto-reset form inputs after submission
+      formElement.reset();
       setLoading(false);
     }
   };
@@ -54,16 +91,14 @@ export default function InquiryForm() {
           <label><span>Delivery location</span><input name="delivery" type="text" autoComplete="address-level2" placeholder="City, state or country" /></label>
           <label className="field-wide"><span>Requirement details *</span><textarea name="message" rows={5} placeholder="Share vial format, size, delivery location or any special requirement." required /></label>
         </div>
-        <button className="button button-primary form-submit" type="submit" disabled={loading}>
-          {loading ? "Submitting..." : "Submit Enquiry"} <ArrowIcon />
-        </button>
-        {result ? (
-          <p className="form-note" style={{ color: result.includes("Success") ? "#82C9E8" : "#ff8888", fontWeight: 600, marginTop: "16px" }} aria-live="polite">
-            {result}
-          </p>
-        ) : (
-          <p className="form-note">Your enquiry will be sent directly to Sealwell Packaging.</p>
-        )}
+        
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", alignItems: "center", marginTop: "8px" }}>
+          <button className="button button-primary form-submit" type="submit" disabled={loading}>
+            {loading ? "Preparing Draft..." : "Submit Enquiry"} <ArrowIcon />
+          </button>
+        </div>
+
+        <p className="form-note">Your enquiry will be sent directly to Sealwell Packaging.</p>
       </form>
     </div>
   );

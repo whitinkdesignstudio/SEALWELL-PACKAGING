@@ -94,7 +94,6 @@ export function SiteFooter() {
         </div>
         <div className="footer-bottom">
           <span>© 2026 Sealwell Packaging. All rights reserved.</span>
-          <span>13 mm · 20 mm · SW01–SW25</span>
           <span>Ahmedabad, Gujarat, India</span>
         </div>
       </footer>

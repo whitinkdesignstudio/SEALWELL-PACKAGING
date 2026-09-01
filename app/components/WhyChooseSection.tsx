@@ -123,21 +123,21 @@ function QualityGrid() {
       aria-hidden="true"
     >
       {[0, 35, 70, 105, 140].map((y) => (
-        <line key={`h${y}`} x1="0" y1={y} x2="140" y2={y} stroke="rgba(255,255,255,0.07)" strokeWidth="1" />
+        <line key={`h${y}`} x1="0" y1={y} x2="140" y2={y} stroke="rgba(7,43,77,0.05)" strokeWidth="1" />
       ))}
       {[0, 35, 70, 105, 140].map((x) => (
-        <line key={`v${x}`} x1={x} y1="0" x2={x} y2="140" stroke="rgba(255,255,255,0.07)" strokeWidth="1" />
+        <line key={`v${x}`} x1={x} y1="0" x2={x} y2="140" stroke="rgba(7,43,77,0.05)" strokeWidth="1" />
       ))}
-      <path d="M10 10 L10 24 M10 10 L24 10" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M130 10 L130 24 M130 10 L116 10" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M10 130 L10 116 M10 130 L24 130" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M130 130 L130 116 M130 130 L116 130" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" strokeLinecap="round" />
-      <circle cx="70" cy="70" r="20" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
-      <circle cx="70" cy="70" r="4" stroke="rgba(255,255,255,0.18)" strokeWidth="1" />
-      <line x1="70" y1="46" x2="70" y2="56" stroke="rgba(255,255,255,0.14)" strokeWidth="1" strokeLinecap="round" />
-      <line x1="70" y1="84" x2="70" y2="94" stroke="rgba(255,255,255,0.14)" strokeWidth="1" strokeLinecap="round" />
-      <line x1="46" y1="70" x2="56" y2="70" stroke="rgba(255,255,255,0.14)" strokeWidth="1" strokeLinecap="round" />
-      <line x1="84" y1="70" x2="94" y2="70" stroke="rgba(255,255,255,0.14)" strokeWidth="1" strokeLinecap="round" />
+      <path d="M10 10 L10 24 M10 10 L24 10" stroke="rgba(34,135,195,0.3)" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M130 10 L130 24 M130 10 L116 10" stroke="rgba(34,135,195,0.3)" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M10 130 L10 116 M10 130 L24 130" stroke="rgba(34,135,195,0.3)" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M130 130 L130 116 M130 130 L116 130" stroke="rgba(34,135,195,0.3)" strokeWidth="1.5" strokeLinecap="round" />
+      <circle cx="70" cy="70" r="20" stroke="rgba(34,135,195,0.18)" strokeWidth="1" />
+      <circle cx="70" cy="70" r="4" stroke="rgba(34,135,195,0.35)" strokeWidth="1" />
+      <line x1="70" y1="46" x2="70" y2="56" stroke="rgba(34,135,195,0.25)" strokeWidth="1" strokeLinecap="round" />
+      <line x1="70" y1="84" x2="70" y2="94" stroke="rgba(34,135,195,0.25)" strokeWidth="1" strokeLinecap="round" />
+      <line x1="46" y1="70" x2="56" y2="70" stroke="rgba(34,135,195,0.25)" strokeWidth="1" strokeLinecap="round" />
+      <line x1="84" y1="70" x2="94" y2="70" stroke="rgba(34,135,195,0.25)" strokeWidth="1" strokeLinecap="round" />
     </svg>
   );
 }
@@ -150,13 +150,13 @@ function FeatureCard({ feature }: { feature: typeof features[0] }) {
         <QualityGrid />
         <div className="wcs-card-inner">
           <div className="wcs-card-top">
-            <span className="wcs-num wcs-num--light">{feature.num}</span>
-            <div className="wcs-icon-wrap wcs-icon-wrap--light">{feature.icon}</div>
+            <span className="wcs-num">{feature.num}</span>
+            <div className="wcs-icon-wrap">{feature.icon}</div>
           </div>
-          <h3 className="wcs-title wcs-title--light">{feature.title}</h3>
-          <p className="wcs-copy wcs-copy--light">{feature.copy}</p>
-          <div className="wcs-tag wcs-tag--light">
-            <span className="wcs-tag-dot wcs-tag-dot--light" />
+          <h3 className="wcs-title">{feature.title}</h3>
+          <p className="wcs-copy">{feature.copy}</p>
+          <div className="wcs-tag">
+            <span className="wcs-tag-dot" />
             {feature.highlight}
           </div>
         </div>

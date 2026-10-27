@@ -8,12 +8,14 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  <meta name="google-site-verification" content="qLtiMA69uYaB68i3QGCM1iepMBbJT3M24ncvVVvIiyw" />
   metadataBase: new URL("https://sealwell-packaging.dhruvitra-vanol-333.chatgpt.site"),
   title: "Sealwell Packaging | Flip-Off Seal Manufacturer",
   description: "Ahmedabad manufacturer of 13 mm and 20 mm flip-off seals and aluminium vial seals in 25 standard colours.",
   applicationName: "Sealwell Packaging",
   keywords: ["flip-off seals", "13 mm flip-off seal", "20 mm flip-off seal", "aluminium vial seals", "Ahmedabad manufacturer"],
+  verification: {
+    google: "qLtiMA69uYaB68i3QGCM1iepMBbJT3M24ncvVVvIiyw",
+  },
   openGraph: {
     title: "Sealwell Packaging | Flip-Off Seal Manufacturer",
     description: "13 mm and 20 mm flip-off seals with 25 standard colour references, manufactured in Ahmedabad.",

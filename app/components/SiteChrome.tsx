@@ -135,7 +135,19 @@ export function PageHero({
         </div>
       ) : null}
       <div className="page-hero-content">
-        <h2>{title}</h2>
+        <h1
+          style={{
+            fontSize: "clamp(24px, 2.8vw, 32px)",
+            fontWeight: 600,
+            lineHeight: 1.2,
+            letterSpacing: "-0.015em",
+            color: "#ffffff",
+            margin: "0 0 10px 0",
+            textShadow: "0 2px 10px rgba(0, 0, 0, 0.3)",
+          }}
+        >
+          {title}
+        </h1>
         {intro ? <p className="page-hero-intro">{intro}</p> : null}
       </div>
     </section>

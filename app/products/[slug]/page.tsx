@@ -16,15 +16,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const resolvedParams = await params;
   const slug = resolvedParams?.slug || "";
   const is13 = slug.includes("13");
+  const canonicalPath = is13 ? "/products/13-mm" : "/products/20-mm";
   if (is13) {
     return {
       title: "13 mm Flip-Off Seal | Sealwell Packaging",
       description: "13 mm Flip-Off Seals for pharmaceutical vials. Aluminium outer component with flip-off configuration for compact closure needs.",
+      alternates: {
+        canonical: canonicalPath,
+      },
     };
   }
   return {
     title: "20 mm Flip-Off Seal | Sealwell Packaging",
     description: "20 mm Flip-Off Seals for larger pharmaceutical vials. Manufactured with controlled dimensions, clean finish, and multiple colours.",
+    alternates: {
+      canonical: canonicalPath,
+    },
   };
 }
 

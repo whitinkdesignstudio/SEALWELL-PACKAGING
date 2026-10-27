@@ -4,6 +4,9 @@ import { ContactBand, PageHero, SiteShell } from "../components/SiteChrome";
 export const metadata: Metadata = {
   title: "About Sealwell Packaging | Flip-Off Seal Manufacturer",
   description: "Learn about Sealwell Packaging, a B2B manufacturer specializing in 13 mm and 20 mm pharmaceutical flip-off seals and aluminium vial closures.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 const companyValues = [

@@ -5,6 +5,9 @@ import { ColourSelectionSection } from "../components/ColourSelectionSection";
 export const metadata: Metadata = {
   title: "Standard Colour Selection | Sealwell Packaging",
   description: "Explore 25 standard colour options for 13 mm and 20 mm flip-off seals offered by Sealwell Packaging for product identification and branding.",
+  alternates: {
+    canonical: "/colours",
+  },
 };
 
 export default function ColoursPage() {

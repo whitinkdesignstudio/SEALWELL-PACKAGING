@@ -4,6 +4,9 @@ import { ContactBand, PageHero, SiteShell } from "../components/SiteChrome";
 export const metadata: Metadata = {
   title: "Consistent Manufacturing & Quality | Sealwell Packaging",
   description: "Learn about Sealwell Packaging's focus on consistent quality, dimensional accuracy, fit, finish, and dependable supply.",
+  alternates: {
+    canonical: "/quality",
+  },
 };
 
 const qualityPoints = [

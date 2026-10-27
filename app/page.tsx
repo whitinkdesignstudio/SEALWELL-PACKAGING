@@ -1,9 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowIcon, SiteShell, WhatsAppIcon } from "./components/SiteChrome";
 import { ClientLogosMarquee } from "./components/ClientLogosMarquee";
 import { products, whatsappLink } from "./data/site";
 import { WhyChooseSection } from "./components/WhyChooseSection";
 import { ColourSelectionSection } from "./components/ColourSelectionSection";
+
+export const metadata: Metadata = {
+  title: "Sealwell Packaging | Flip-Off Seal Manufacturer",
+  description: "Ahmedabad manufacturer of 13 mm and 20 mm flip-off seals and aluminium vial seals in 25 standard colours.",
+  alternates: {
+    canonical: "https://sealwell-packaging.dhruvitra-vanol-333.chatgpt.site/",
+  },
+};
 
 export default function Home() {
   const prod20 = products.find((p) => p.slug === "20-mm") || products[1];
@@ -18,7 +27,19 @@ export default function Home() {
           <div className="home-hero-overlay" />
         </div>
         <div className="home-copy">
-          <h2>Pharmaceutical Flip-Off Seals</h2>
+          <h1
+            style={{
+              fontSize: "clamp(24px, 2.8vw, 32px)",
+              fontWeight: 600,
+              lineHeight: 1.2,
+              letterSpacing: "-0.015em",
+              color: "#ffffff",
+              margin: "0 0 10px 0",
+              textShadow: "0 2px 10px rgba(0, 0, 0, 0.3)",
+            }}
+          >
+            Pharmaceutical Flip-Off Seals
+          </h1>
           <p>
             Sealwell Packaging manufactures 13 mm and 20 mm Flip-Off Seals and Aluminium Vial Seals in 25 standard colours.
           </p>

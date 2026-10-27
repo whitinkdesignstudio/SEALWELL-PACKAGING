@@ -6,6 +6,9 @@ import { contact, whatsappLink } from "../data/site";
 export const metadata: Metadata = {
   title: "Contact Sealwell Packaging | Flip-Off Seal Manufacturer",
   description: "Contact Sealwell Packaging for 13 mm and 20 mm pharmaceutical flip-off seal enquiries. Reach us on WhatsApp at 9898866610.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

@@ -13,6 +13,19 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+          },
+        ],
+      },
+    ];
+  },
   async rewrites() {
     return [
       {

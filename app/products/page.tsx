@@ -6,7 +6,10 @@ import { RubberStoppersSection } from "../components/RubberStoppersSection";
 
 export const metadata: Metadata = {
   title: "Pharmaceutical Rubber Stoppers & Flip-Off Seals | Sealwell Packaging",
-  description: "Explore pharmaceutical rubber stoppers, lyophilization closures, bottle stoppers, and flip-off seals manufactured by Sealwell Packaging since 1995.",
+  description: "Explore high-quality pharmaceutical rubber stoppers, lyophilization closures, industrial bottle stoppers, and aluminium flip-off seals from Sealwell Packaging since 1995.",
+  alternates: {
+    canonical: "/products",
+  },
 };
 
 export default function ProductsPage() {

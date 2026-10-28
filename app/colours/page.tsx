@@ -1,18 +1,45 @@
 import type { Metadata } from "next";
 import { ContactBand, PageHero, SiteShell } from "../components/SiteChrome";
 import { ColourSelectionSection } from "../components/ColourSelectionSection";
+import { BreadcrumbSchema } from "../components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Standard Colour Selection | Sealwell Packaging",
   description: "Explore 25 standard colour options for 13 mm and 20 mm flip-off seals offered by Sealwell Packaging for product identification and branding.",
   alternates: {
-    canonical: "/colours",
+    canonical: "https://www.sealwellpackaging.com/colours",
+  },
+  openGraph: {
+    title: "Standard Colour Selection | Sealwell Packaging",
+    description: "Explore 25 standard colour options for 13 mm and 20 mm flip-off seals offered by Sealwell Packaging for product identification and branding.",
+    url: "https://www.sealwellpackaging.com/colours",
+    type: "website",
+    images: [
+      {
+        url: "/assets/colours-banner.png",
+        width: 1200,
+        height: 630,
+        alt: "Sealwell Packaging standard colour selection",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Standard Colour Selection | Sealwell Packaging",
+    description: "Explore 25 standard colour options for 13 mm and 20 mm flip-off seals offered by Sealwell Packaging for product identification and branding.",
+    images: ["/assets/colours-banner.png"],
   },
 };
 
 export default function ColoursPage() {
   return (
     <SiteShell current="Colours">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Colours", path: "/colours" },
+        ]}
+      />
       <PageHero
         title="Standard Colour Selection"
         intro="Sealwell Packaging offers a wide range of colours to meet product identification, branding, and customer-specific packaging requirements."
@@ -22,7 +49,7 @@ export default function ColoursPage() {
 
       <section className="section editorial-intro">
         <div className="editorial-intro-bg">
-          <img src="/assets/banner/colour.png" alt="Sealwell Packaging colour selection" />
+          <img src="/assets/banner/colour.png" alt="Sealwell Packaging colour selection" loading="lazy" decoding="async" />
           <div className="editorial-intro-overlay" />
         </div>
         <div style={{ position: "relative", zIndex: 2 }}>
@@ -50,5 +77,3 @@ export default function ColoursPage() {
     </SiteShell>
   );
 }
-
-

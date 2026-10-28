@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://sealwell-packaging.dhruvitra-vanol-333.chatgpt.site";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.sealwellpackaging.com";
 
   return {
     rules: [
@@ -11,5 +11,6 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
+    host: "https://www.sealwellpackaging.com",
   };
 }

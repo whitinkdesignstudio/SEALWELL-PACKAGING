@@ -3,18 +3,45 @@ import { ArrowIcon, ContactBand, PageHero, SiteShell, WhatsAppIcon } from "../co
 import { products, whatsappLink } from "../data/site";
 import { ProductFeaturesSection } from "../components/ProductFeaturesSection";
 import { RubberStoppersSection } from "../components/RubberStoppersSection";
+import { BreadcrumbSchema } from "../components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Pharmaceutical Rubber Stoppers & Flip-Off Seals | Sealwell Packaging",
   description: "Explore high-quality pharmaceutical rubber stoppers, lyophilization closures, industrial bottle stoppers, and aluminium flip-off seals from Sealwell Packaging since 1995.",
   alternates: {
-    canonical: "/products",
+    canonical: "https://www.sealwellpackaging.com/products",
+  },
+  openGraph: {
+    title: "Pharmaceutical Rubber Stoppers & Flip-Off Seals | Sealwell Packaging",
+    description: "Explore high-quality pharmaceutical rubber stoppers, lyophilization closures, and aluminium flip-off seals from Sealwell Packaging.",
+    url: "https://www.sealwellpackaging.com/products",
+    type: "website",
+    images: [
+      {
+        url: "/assets/products-banner.png",
+        width: 1200,
+        height: 630,
+        alt: "Sealwell Packaging pharmaceutical closures and flip-off seals",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pharmaceutical Rubber Stoppers & Flip-Off Seals | Sealwell Packaging",
+    description: "Explore high-quality pharmaceutical rubber stoppers, lyophilization closures, and aluminium flip-off seals from Sealwell Packaging.",
+    images: ["/assets/products-banner.png"],
   },
 };
 
 export default function ProductsPage() {
   return (
     <SiteShell current="Products">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Products", path: "/products" },
+        ]}
+      />
       <PageHero
         title="Pharmaceutical & Industrial Closures"
         intro="High-precision rubber stoppers, lyophilization seals, and aluminium flip-off closures."
@@ -31,7 +58,7 @@ export default function ProductsPage() {
         {products.map((product, idx) => (
           <article className={idx % 2 === 0 ? "feature-product-20mm" : "feature-product-13mm"} id={product.slug} key={product.slug}>
             <div className="product-image-box">
-              <img src={product.image} alt={product.imageAlt} />
+              <img src={product.image} alt={product.imageAlt} loading="lazy" decoding="async" />
             </div>
             <div className="product-details-box">
               <h3>{product.name}</h3>

@@ -1,11 +1,32 @@
 import type { Metadata } from "next";
 import { ContactBand, PageHero, SiteShell } from "../components/SiteChrome";
+import { BreadcrumbSchema } from "../components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Consistent Manufacturing & Quality | Sealwell Packaging",
   description: "Learn about Sealwell Packaging's focus on consistent quality, dimensional accuracy, fit, finish, and dependable supply.",
   alternates: {
-    canonical: "/quality",
+    canonical: "https://www.sealwellpackaging.com/quality",
+  },
+  openGraph: {
+    title: "Consistent Manufacturing & Quality | Sealwell Packaging",
+    description: "Learn about Sealwell Packaging's focus on consistent quality, dimensional accuracy, fit, finish, and dependable supply.",
+    url: "https://www.sealwellpackaging.com/quality",
+    type: "website",
+    images: [
+      {
+        url: "/assets/quality-inspection.png",
+        width: 1200,
+        height: 630,
+        alt: "Sealwell Packaging manufacturing quality and standards",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Consistent Manufacturing & Quality | Sealwell Packaging",
+    description: "Learn about Sealwell Packaging's focus on consistent quality, dimensional accuracy, fit, finish, and dependable supply.",
+    images: ["/assets/quality-inspection.png"],
   },
 };
 
@@ -64,6 +85,12 @@ const qualityPoints = [
 export default function QualityPage() {
   return (
     <SiteShell current="Quality">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Quality", path: "/quality" },
+        ]}
+      />
       <PageHero
         title="Quality & Standards"
         intro="High-precision flip-off seals with dependable B2B supply."
@@ -73,7 +100,7 @@ export default function QualityPage() {
 
       <section className="section editorial-intro">
         <div className="editorial-intro-bg">
-          <img src="/assets/banner/manufuture quilaty.png" alt="Sealwell Packaging manufacturing quality" />
+          <img src="/assets/banner/manufuture quilaty.png" alt="Sealwell Packaging manufacturing quality" loading="lazy" decoding="async" />
           <div className="editorial-intro-overlay" />
         </div>
         <div style={{ position: "relative", zIndex: 2 }}>
@@ -113,5 +140,3 @@ export default function QualityPage() {
     </SiteShell>
   );
 }
-
-

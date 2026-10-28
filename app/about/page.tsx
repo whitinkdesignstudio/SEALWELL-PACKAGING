@@ -1,11 +1,32 @@
 import type { Metadata } from "next";
+import { BreadcrumbSchema } from "../components/JsonLd";
 import { ContactBand, PageHero, SiteShell } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
   title: "About Sealwell Packaging | Flip-Off Seal Manufacturer",
   description: "Learn about Sealwell Packaging, a B2B manufacturer specializing in 13 mm and 20 mm pharmaceutical flip-off seals and aluminium vial closures.",
   alternates: {
-    canonical: "/about",
+    canonical: "https://www.sealwellpackaging.com/about",
+  },
+  openGraph: {
+    title: "About Sealwell Packaging | Flip-Off Seal Manufacturer",
+    description: "Learn about Sealwell Packaging, a B2B manufacturer specializing in 13 mm and 20 mm pharmaceutical flip-off seals and aluminium vial closures.",
+    url: "https://www.sealwellpackaging.com/about",
+    type: "website",
+    images: [
+      {
+        url: "/assets/about-manufacturing.png",
+        width: 1200,
+        height: 630,
+        alt: "About Sealwell Packaging manufacturing facility",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Sealwell Packaging | Flip-Off Seal Manufacturer",
+    description: "Learn about Sealwell Packaging, a B2B manufacturer specializing in 13 mm and 20 mm pharmaceutical flip-off seals and aluminium vial closures.",
+    images: ["/assets/about-manufacturing.png"],
   },
 };
 
@@ -161,16 +182,22 @@ const applications = [
 export default function AboutPage() {
   return (
     <SiteShell current="About">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", path: "/" },
+          { name: "About", path: "/about" },
+        ]}
+      />
       <PageHero
         title="About Sealwell Packaging"
         image="/assets/banner-1920x800.png"
-        imageAlt="Sealwell Packaging 1920x800 banner placeholder"
+        imageAlt="Sealwell Packaging pharmaceutical packaging facility banner"
       />
 
       {/* What We Manufacture & Our Approach */}
       <section className="section editorial-intro">
         <div className="editorial-intro-bg">
-          <img src="/assets/banner/about.png" alt="Sealwell Packaging manufacturing capabilities" />
+          <img src="/assets/banner/about.png" alt="Sealwell Packaging manufacturing capabilities" loading="lazy" decoding="async" />
           <div className="editorial-intro-overlay" />
         </div>
         <div style={{ position: "relative", zIndex: 2 }}>
@@ -214,14 +241,14 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="founder-spotlight-media">
-              <img src="/assets/founder-1.jpg" alt="Sealwell Packaging Founder Snehal Bipinchandra Shah" />
+              <img src="/assets/founder-1.jpg" alt="Sealwell Packaging Founder Snehal Bipinchandra Shah" loading="lazy" decoding="async" />
             </div>
           </article>
 
           {/* Founder 2: Image Left, Content Right */}
           <article className="founder-spotlight-row reverse">
             <div className="founder-spotlight-media">
-              <img src="/assets/founder-2.jpg" alt="Sealwell Packaging Founder Shrinil Shripal Shah" />
+              <img src="/assets/founder-2.jpg" alt="Sealwell Packaging Founder Shrinil Shripal Shah" loading="lazy" decoding="async" />
             </div>
             <div className="founder-spotlight-content">
               <span className="founder-spotlight-role">Founder & Partner</span>
@@ -249,7 +276,7 @@ export default function AboutPage() {
               <p className="founder-spotlight-bio">
                 Mechanical Engineering Professional | B.E., Government Engineering College, Patan (GTU, 2012)
 
-                Mechanical Engineering professional with a Bachelor's degree from Government Engineering College, Patan, under Gujarat Technological University (GTU), graduated in 2012. With over a decade of industry experience, brings strong technical knowledge, practical expertise, and a professional approach to mechanical engineering projects and operations.
+                Mechanical Engineering professional with a Bachelor&apos;s degree from Government Engineering College, Patan, under Gujarat Technological University (GTU), graduated in 2012. With over a decade of industry experience, brings strong technical knowledge, practical expertise, and a professional approach to mechanical engineering projects and operations.
 
                 Drives business expansion, supply chain management, and strategic client relations at Sealwell Packaging with a solid engineering foundation.
               </p>
@@ -261,7 +288,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="founder-spotlight-media">
-              <img src="/assets/founder-3.jpg" alt="Sealwell Packaging Partner Hardikkumar Dahyabhai Patel" />
+              <img src="/assets/founder-3.jpg" alt="Sealwell Packaging Partner Hardikkumar Dahyabhai Patel" loading="lazy" decoding="async" />
             </div>
           </article>
         </div>

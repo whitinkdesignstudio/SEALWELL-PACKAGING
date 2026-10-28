@@ -2,18 +2,45 @@ import type { Metadata } from "next";
 import InquiryForm from "../components/InquiryForm";
 import { ArrowIcon, PageHero, SiteShell, WhatsAppIcon } from "../components/SiteChrome";
 import { contact, whatsappLink } from "../data/site";
+import { BreadcrumbSchema } from "../components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Contact Sealwell Packaging | Flip-Off Seal Manufacturer",
   description: "Contact Sealwell Packaging for 13 mm and 20 mm pharmaceutical flip-off seal enquiries. Reach us on WhatsApp at 9898866610.",
   alternates: {
-    canonical: "/contact",
+    canonical: "https://www.sealwellpackaging.com/contact",
+  },
+  openGraph: {
+    title: "Contact Sealwell Packaging | Flip-Off Seal Manufacturer",
+    description: "Contact Sealwell Packaging for 13 mm and 20 mm pharmaceutical flip-off seal enquiries. Reach us on WhatsApp at 9898866610.",
+    url: "https://www.sealwellpackaging.com/contact",
+    type: "website",
+    images: [
+      {
+        url: "/assets/banner/contact.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact Sealwell Packaging for pharmaceutical closures",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Sealwell Packaging | Flip-Off Seal Manufacturer",
+    description: "Contact Sealwell Packaging for 13 mm and 20 mm pharmaceutical flip-off seal enquiries. Reach us on WhatsApp at 9898866610.",
+    images: ["/assets/banner/contact.png"],
   },
 };
 
 export default function ContactPage() {
   return (
     <SiteShell current="Contact">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ]}
+      />
       <PageHero
         title="Contact Sealwell Packaging"
         intro="Submit your packaging requirements or message us directly on WhatsApp."
@@ -74,5 +101,3 @@ export default function ContactPage() {
     </SiteShell>
   );
 }
-
-

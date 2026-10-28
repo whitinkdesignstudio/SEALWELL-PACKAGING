@@ -13,6 +13,21 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "sealwellpackaging.com",
+          },
+        ],
+        destination: "https://www.sealwellpackaging.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

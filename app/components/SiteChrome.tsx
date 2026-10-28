@@ -30,10 +30,22 @@ export function PhoneIcon() {
   return <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7.2 3.8 9.7 8l-1.9 1.9a15.2 15.2 0 0 0 6.3 6.3l1.9-1.9 4.2 2.5c.5.3.7.8.6 1.3l-.4 2.1c-.1.6-.7 1-1.3 1C10.1 21.2 2.8 13.9 2.8 4.9c0-.6.4-1.2 1-1.3l2.1-.4c.5-.1 1 .1 1.3.6Z" /></svg>;
 }
 
-export function Brand({ logoSrc = "/assets/logo.png" }: { logoSrc?: string }) {
+export function Brand({
+  logoSrc = "/assets/logo.png",
+  loading = "eager",
+}: {
+  logoSrc?: string;
+  loading?: "eager" | "lazy";
+}) {
   return (
     <Link className="brand" href="/" aria-label="Sealwell Packaging home">
-      <img src={logoSrc} alt="Sealwell Packaging Logo" className="brand-logo" />
+      <img
+        src={logoSrc}
+        alt="Sealwell Packaging Logo"
+        className="brand-logo"
+        loading={loading}
+        decoding="async"
+      />
     </Link>
   );
 }
@@ -76,7 +88,7 @@ export function SiteFooter() {
       <footer className="site-footer">
         <div className="footer-top">
           <div>
-            <Brand logoSrc="/assets/footer-logo.png" />
+            <Brand logoSrc="/assets/footer-logo.png" loading="lazy" />
             <p>Specialised manufacturer of 13 mm and 20 mm flip-off seals and aluminium vial seals in Ahmedabad, Gujarat.</p>
           </div>
           <div>
@@ -130,7 +142,11 @@ export function PageHero({
     <section className="page-hero">
       {image ? (
         <div className="page-hero-bg">
-          <img src={image} alt={imageAlt || "Sealwell Packaging banner"} />
+          <img
+            src={image}
+            alt={imageAlt || "Sealwell Packaging banner"}
+            fetchPriority="high"
+          />
           <div className="page-hero-overlay" />
         </div>
       ) : null}

@@ -10,7 +10,27 @@ export const metadata: Metadata = {
   title: "Sealwell Packaging | Flip-Off Seal Manufacturer",
   description: "Ahmedabad manufacturer of 13 mm and 20 mm flip-off seals and aluminium vial seals in 25 standard colours.",
   alternates: {
-    canonical: "https://sealwell-packaging.dhruvitra-vanol-333.chatgpt.site/",
+    canonical: "https://www.sealwellpackaging.com/",
+  },
+  openGraph: {
+    title: "Sealwell Packaging | Flip-Off Seal Manufacturer",
+    description: "Ahmedabad manufacturer of 13 mm and 20 mm flip-off seals and aluminium vial seals in 25 standard colours.",
+    url: "https://www.sealwellpackaging.com/",
+    type: "website",
+    images: [
+      {
+        url: "/assets/home-hero.png",
+        width: 1672,
+        height: 941,
+        alt: "Sealwell Packaging flip-off seal range",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sealwell Packaging | Flip-Off Seal Manufacturer",
+    description: "Ahmedabad manufacturer of 13 mm and 20 mm flip-off seals and aluminium vial seals in 25 standard colours.",
+    images: ["/assets/home-hero.png"],
   },
 };
 
@@ -23,7 +43,7 @@ export default function Home() {
       {/* 1. Hero */}
       <section className="home-hero">
         <div className="home-hero-bg">
-          <img src="/assets/home-hero.png" alt="Sealwell Packaging flip-off seals" />
+          <img src="/assets/home-hero.png" alt="Sealwell Packaging flip-off seals" fetchPriority="high" />
           <div className="home-hero-overlay" />
         </div>
         <div className="home-copy">
@@ -111,7 +131,7 @@ export default function Home() {
       {/* 3. About Section */}
       <section className="section editorial-intro">
         <div className="editorial-intro-bg">
-          <img src="/assets/about-manufacturing-bg.png" alt="Sealwell Packaging cleanroom facility" />
+          <img src="/assets/about-manufacturing-bg.png" alt="Sealwell Packaging cleanroom facility" loading="lazy" decoding="async" />
           <div className="editorial-intro-overlay" />
         </div>
         <div style={{ position: 'relative', zIndex: 2 }}>
@@ -134,7 +154,7 @@ export default function Home() {
         {/* 20 mm Feature */}
         <article className="feature-product-20mm">
           <div className="product-image-box">
-            <img src={prod20.image} alt={prod20.imageAlt} />
+            <img src={prod20.image} alt={prod20.imageAlt} loading="lazy" decoding="async" />
           </div>
           <div className="product-details-box">
             <h3>{prod20.name}</h3>
@@ -179,7 +199,7 @@ export default function Home() {
             </div>
           </div>
           <div className="product-image-box">
-            <img src={prod13.image} alt={prod13.imageAlt} />
+            <img src={prod13.image} alt={prod13.imageAlt} loading="lazy" decoding="async" />
           </div>
         </article>
       </section>

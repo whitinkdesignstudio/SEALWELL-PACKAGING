@@ -20,16 +20,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const canonicalPath = is13 ? "/products/13-mm" : "/products/20-mm";
   const fullCanonicalUrl = `https://www.sealwellpackaging.com${canonicalPath}`;
   const title = is13
-    ? "13 mm Flip-Off Seal | Sealwell Packaging"
-    : "20 mm Flip-Off Seal | Sealwell Packaging";
+    ? "13 mm Flip-Off Seal Manufacturer | Sealwell Packaging"
+    : "20 mm Flip-Off Seal Manufacturer | Sealwell Packaging";
   const description = is13
-    ? "13 mm Flip-Off Seals for pharmaceutical vials. Aluminium outer component with flip-off configuration for compact closure needs."
-    : "20 mm Flip-Off Seals for larger pharmaceutical vials. Manufactured with controlled dimensions, clean finish, and multiple colours.";
+    ? "Precision 13mm flip-off seals for pharmaceutical vials and diagnostics. Available in 25 colours with tamper-evident caps. Request free bulk samples."
+    : "High-grade 20mm flip-off seals for injection & infusion vials. Engineered for sterile crimping, tamper evidence, and secure capping in 25 custom shades.";
   const image = is13 ? "/assets/13mm-flip-off-seal.png" : "/assets/20mm-flip-off-seal.png";
   const imageAlt = is13 ? "13 mm flip-off seal samples" : "20 mm red flip-off seal samples";
 
   return {
-    title,
+    title: {
+      absolute: title,
+    },
     description,
     alternates: {
       canonical: fullCanonicalUrl,

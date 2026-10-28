@@ -3,14 +3,18 @@ import { ContactBand, PageHero, SiteShell } from "../components/SiteChrome";
 import { BreadcrumbSchema } from "../components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Consistent Manufacturing & Quality | Sealwell Packaging",
-  description: "Learn about Sealwell Packaging's focus on consistent quality, dimensional accuracy, fit, finish, and dependable supply.",
+  title: {
+    absolute: "Manufacturing Quality & Standards | Sealwell Packaging",
+  },
+  description:
+    "Discover Sealwell's strict quality assurance, dimensional tolerance checks, and cleanroom packaging standards for sterile pharmaceutical vial seals.",
   alternates: {
     canonical: "https://www.sealwellpackaging.com/quality",
   },
   openGraph: {
-    title: "Consistent Manufacturing & Quality | Sealwell Packaging",
-    description: "Learn about Sealwell Packaging's focus on consistent quality, dimensional accuracy, fit, finish, and dependable supply.",
+    title: "Manufacturing Quality & Standards | Sealwell Packaging",
+    description:
+      "Discover Sealwell's strict quality assurance, dimensional tolerance checks, and cleanroom packaging standards for sterile pharmaceutical vial seals.",
     url: "https://www.sealwellpackaging.com/quality",
     type: "website",
     images: [
@@ -24,8 +28,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Consistent Manufacturing & Quality | Sealwell Packaging",
-    description: "Learn about Sealwell Packaging's focus on consistent quality, dimensional accuracy, fit, finish, and dependable supply.",
+    title: "Manufacturing Quality & Standards | Sealwell Packaging",
+    description:
+      "Discover Sealwell's strict quality assurance, dimensional tolerance checks, and cleanroom packaging standards for sterile pharmaceutical vial seals.",
     images: ["/assets/quality-inspection.png"],
   },
 };

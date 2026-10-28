@@ -4,14 +4,18 @@ import { ColourSelectionSection } from "../components/ColourSelectionSection";
 import { BreadcrumbSchema } from "../components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Standard Colour Selection | Sealwell Packaging",
-  description: "Explore 25 standard colour options for 13 mm and 20 mm flip-off seals offered by Sealwell Packaging for product identification and branding.",
+  title: {
+    absolute: "Flip-Off Seal Colours (25 Shades) | Sealwell Packaging",
+  },
+  description:
+    "Browse 25 standard flip-off seal colours (SW01 to SW25) and custom Pantone matching for 13mm & 20mm vial closures. Ideal for clear product coding.",
   alternates: {
     canonical: "https://www.sealwellpackaging.com/colours",
   },
   openGraph: {
-    title: "Standard Colour Selection | Sealwell Packaging",
-    description: "Explore 25 standard colour options for 13 mm and 20 mm flip-off seals offered by Sealwell Packaging for product identification and branding.",
+    title: "Flip-Off Seal Colours (25 Shades) | Sealwell Packaging",
+    description:
+      "Browse 25 standard flip-off seal colours (SW01 to SW25) and custom Pantone matching for 13mm & 20mm vial closures. Ideal for clear product coding.",
     url: "https://www.sealwellpackaging.com/colours",
     type: "website",
     images: [
@@ -25,8 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Standard Colour Selection | Sealwell Packaging",
-    description: "Explore 25 standard colour options for 13 mm and 20 mm flip-off seals offered by Sealwell Packaging for product identification and branding.",
+    title: "Flip-Off Seal Colours (25 Shades) | Sealwell Packaging",
+    description:
+      "Browse 25 standard flip-off seal colours (SW01 to SW25) and custom Pantone matching for 13mm & 20mm vial closures. Ideal for clear product coding.",
     images: ["/assets/colours-banner.png"],
   },
 };

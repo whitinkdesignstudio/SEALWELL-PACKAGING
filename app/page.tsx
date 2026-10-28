@@ -7,14 +7,18 @@ import { WhyChooseSection } from "./components/WhyChooseSection";
 import { ColourSelectionSection } from "./components/ColourSelectionSection";
 
 export const metadata: Metadata = {
-  title: "Sealwell Packaging | Flip-Off Seal Manufacturer",
-  description: "Ahmedabad manufacturer of 13 mm and 20 mm flip-off seals and aluminium vial seals in 25 standard colours.",
+  title: {
+    absolute: "Flip-Off Seal Manufacturer & Supplier India | Sealwell Packaging",
+  },
+  description:
+    "Leading manufacturer of 13mm & 20mm pharmaceutical flip-off seals, vial closures, and rubber stoppers in 25 colours. Enquire today for bulk orders.",
   alternates: {
     canonical: "https://www.sealwellpackaging.com/",
   },
   openGraph: {
-    title: "Sealwell Packaging | Flip-Off Seal Manufacturer",
-    description: "Ahmedabad manufacturer of 13 mm and 20 mm flip-off seals and aluminium vial seals in 25 standard colours.",
+    title: "Flip-Off Seal Manufacturer & Supplier India | Sealwell Packaging",
+    description:
+      "Leading manufacturer of 13mm & 20mm pharmaceutical flip-off seals, vial closures, and rubber stoppers in 25 colours. Enquire today for bulk orders.",
     url: "https://www.sealwellpackaging.com/",
     type: "website",
     images: [
@@ -28,8 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sealwell Packaging | Flip-Off Seal Manufacturer",
-    description: "Ahmedabad manufacturer of 13 mm and 20 mm flip-off seals and aluminium vial seals in 25 standard colours.",
+    title: "Flip-Off Seal Manufacturer & Supplier India | Sealwell Packaging",
+    description:
+      "Leading manufacturer of 13mm & 20mm pharmaceutical flip-off seals, vial closures, and rubber stoppers in 25 colours. Enquire today for bulk orders.",
     images: ["/assets/home-hero.png"],
   },
 };

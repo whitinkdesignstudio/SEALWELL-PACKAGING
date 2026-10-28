@@ -3,14 +3,18 @@ import { BreadcrumbSchema } from "../components/JsonLd";
 import { ContactBand, PageHero, SiteShell } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
-  title: "About Sealwell Packaging | Flip-Off Seal Manufacturer",
-  description: "Learn about Sealwell Packaging, a B2B manufacturer specializing in 13 mm and 20 mm pharmaceutical flip-off seals and aluminium vial closures.",
+  title: {
+    absolute: "About Sealwell Packaging | Vial Seal & Closure Manufacturer",
+  },
+  description:
+    "Established in 1995, Sealwell Packaging manufactures precision 13mm & 20mm flip-off seals, vial closures, and rubber stoppers for pharmaceutical firms.",
   alternates: {
     canonical: "https://www.sealwellpackaging.com/about",
   },
   openGraph: {
-    title: "About Sealwell Packaging | Flip-Off Seal Manufacturer",
-    description: "Learn about Sealwell Packaging, a B2B manufacturer specializing in 13 mm and 20 mm pharmaceutical flip-off seals and aluminium vial closures.",
+    title: "About Sealwell Packaging | Vial Seal & Closure Manufacturer",
+    description:
+      "Established in 1995, Sealwell Packaging manufactures precision 13mm & 20mm flip-off seals, vial closures, and rubber stoppers for pharmaceutical firms.",
     url: "https://www.sealwellpackaging.com/about",
     type: "website",
     images: [
@@ -24,8 +28,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Sealwell Packaging | Flip-Off Seal Manufacturer",
-    description: "Learn about Sealwell Packaging, a B2B manufacturer specializing in 13 mm and 20 mm pharmaceutical flip-off seals and aluminium vial closures.",
+    title: "About Sealwell Packaging | Vial Seal & Closure Manufacturer",
+    description:
+      "Established in 1995, Sealwell Packaging manufactures precision 13mm & 20mm flip-off seals, vial closures, and rubber stoppers for pharmaceutical firms.",
     images: ["/assets/about-manufacturing.png"],
   },
 };

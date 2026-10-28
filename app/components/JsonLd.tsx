@@ -15,7 +15,7 @@ export function OrganizationSchema() {
     },
     image: `${BASE_URL}/assets/home-hero.png`,
     description:
-      "Ahmedabad manufacturer of 13 mm and 20 mm flip-off seals and aluminium vial seals in 25 standard colours.",
+      "Leading manufacturer of 13mm & 20mm pharmaceutical flip-off seals, vial closures, and rubber stoppers in 25 colours. Enquire today for bulk orders.",
     telephone: "+91-98988-66610",
     email: "sealwellpack@gmail.com",
     address: {
@@ -60,7 +60,7 @@ export function WebSiteSchema() {
     url: `${BASE_URL}/`,
     name: "Sealwell Packaging",
     description:
-      "Ahmedabad manufacturer of 13 mm and 20 mm flip-off seals and aluminium vial seals in 25 standard colours.",
+      "Leading manufacturer of 13mm & 20mm pharmaceutical flip-off seals, vial closures, and rubber stoppers in 25 colours. Enquire today for bulk orders.",
     publisher: {
       "@id": `${BASE_URL}/#organization`,
     },

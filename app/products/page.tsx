@@ -6,14 +6,18 @@ import { RubberStoppersSection } from "../components/RubberStoppersSection";
 import { BreadcrumbSchema } from "../components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Pharmaceutical Rubber Stoppers & Flip-Off Seals | Sealwell Packaging",
-  description: "Explore high-quality pharmaceutical rubber stoppers, lyophilization closures, industrial bottle stoppers, and aluminium flip-off seals from Sealwell Packaging since 1995.",
+  title: {
+    absolute: "Pharmaceutical Flip-Off Seals & Closures | Sealwell Packaging",
+  },
+  description:
+    "Explore our range of 13mm & 20mm flip-off seals, pharmaceutical rubber stoppers, and lyophilization vial closures engineered for sterile packaging.",
   alternates: {
     canonical: "https://www.sealwellpackaging.com/products",
   },
   openGraph: {
-    title: "Pharmaceutical Rubber Stoppers & Flip-Off Seals | Sealwell Packaging",
-    description: "Explore high-quality pharmaceutical rubber stoppers, lyophilization closures, and aluminium flip-off seals from Sealwell Packaging.",
+    title: "Pharmaceutical Flip-Off Seals & Closures | Sealwell Packaging",
+    description:
+      "Explore our range of 13mm & 20mm flip-off seals, pharmaceutical rubber stoppers, and lyophilization vial closures engineered for sterile packaging.",
     url: "https://www.sealwellpackaging.com/products",
     type: "website",
     images: [
@@ -27,8 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pharmaceutical Rubber Stoppers & Flip-Off Seals | Sealwell Packaging",
-    description: "Explore high-quality pharmaceutical rubber stoppers, lyophilization closures, and aluminium flip-off seals from Sealwell Packaging.",
+    title: "Pharmaceutical Flip-Off Seals & Closures | Sealwell Packaging",
+    description:
+      "Explore our range of 13mm & 20mm flip-off seals, pharmaceutical rubber stoppers, and lyophilization vial closures engineered for sterile packaging.",
     images: ["/assets/products-banner.png"],
   },
 };

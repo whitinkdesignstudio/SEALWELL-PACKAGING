@@ -5,14 +5,18 @@ import { contact, whatsappLink } from "../data/site";
 import { BreadcrumbSchema } from "../components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Contact Sealwell Packaging | Flip-Off Seal Manufacturer",
-  description: "Contact Sealwell Packaging for 13 mm and 20 mm pharmaceutical flip-off seal enquiries. Reach us on WhatsApp at 9898866610.",
+  title: {
+    absolute: "Contact Sealwell Packaging | RFQ & Flip-Off Seal Enquiries",
+  },
+  description:
+    "Request a quote or order free samples for 13mm & 20mm flip-off seals. Contact Sealwell Packaging via phone, email, or WhatsApp (+91 98988 66610).",
   alternates: {
     canonical: "https://www.sealwellpackaging.com/contact",
   },
   openGraph: {
-    title: "Contact Sealwell Packaging | Flip-Off Seal Manufacturer",
-    description: "Contact Sealwell Packaging for 13 mm and 20 mm pharmaceutical flip-off seal enquiries. Reach us on WhatsApp at 9898866610.",
+    title: "Contact Sealwell Packaging | RFQ & Flip-Off Seal Enquiries",
+    description:
+      "Request a quote or order free samples for 13mm & 20mm flip-off seals. Contact Sealwell Packaging via phone, email, or WhatsApp (+91 98988 66610).",
     url: "https://www.sealwellpackaging.com/contact",
     type: "website",
     images: [
@@ -26,8 +30,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Sealwell Packaging | Flip-Off Seal Manufacturer",
-    description: "Contact Sealwell Packaging for 13 mm and 20 mm pharmaceutical flip-off seal enquiries. Reach us on WhatsApp at 9898866610.",
+    title: "Contact Sealwell Packaging | RFQ & Flip-Off Seal Enquiries",
+    description:
+      "Request a quote or order free samples for 13mm & 20mm flip-off seals. Contact Sealwell Packaging via phone, email, or WhatsApp (+91 98988 66610).",
     images: ["/assets/banner/contact.png"],
   },
 };
